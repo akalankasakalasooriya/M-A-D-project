@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "471099503491",
+    "firebase_url": "https://sewa-seven.firebaseio.com",
+    "project_id": "sewa-seven",
+    "storage_bucket": "sewa-seven.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471099503491:android:d9727c20f9f04ab7787cb6",
+        "android_client_info": {
+          "package_name": "com.droidapp.sewaseven"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471099503491-clnvj7j5cthg1om06p3fict6auqgnj25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANEJez1B_zikAsN1WulQEgBdbhKkHYASY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471099503491-clnvj7j5cthg1om06p3fict6auqgnj25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
