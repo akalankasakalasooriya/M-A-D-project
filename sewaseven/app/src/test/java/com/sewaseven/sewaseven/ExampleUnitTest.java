@@ -1,4 +1,4 @@
-package com.example.sewaseven;
+package com.sewaseven.sewaseven;
 
 import org.junit.Test;
 
