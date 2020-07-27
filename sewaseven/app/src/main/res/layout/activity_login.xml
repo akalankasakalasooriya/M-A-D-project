@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signin"
         android:layout_width="133dp"
         android:layout_height="49dp"
         android:layout_marginStart="136dp"
@@ -32,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/emailtxt"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
@@ -53,6 +54,6 @@
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/emailtxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
