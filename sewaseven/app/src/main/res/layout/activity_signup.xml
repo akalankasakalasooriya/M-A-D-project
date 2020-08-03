@@ -12,7 +12,7 @@
         android:layout_height="49dp"
         android:layout_marginStart="136dp"
         android:layout_marginTop="452dp"
-        android:background="#0f4c75"
+        android:background="#EA334C"
         android:text='Signup'
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#FFFFFF"

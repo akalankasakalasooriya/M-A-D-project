@@ -9,9 +9,10 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Home" />
         <activity android:name=".Signup" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

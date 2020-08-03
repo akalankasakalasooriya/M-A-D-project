@@ -17,10 +17,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-
-
 public class Signup extends AppCompatActivity {
-    private EditText emailId , passwordId;
+    private EditText emailId, passwordId;
     private FirebaseAuth FbaseAuth;
 
 
@@ -37,39 +35,33 @@ public class Signup extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = emailId.getText().toString();
-                String password =passwordId.getText().toString();
-                if (email.isEmpty())
-                {
+                String password = passwordId.getText().toString();
+                if (email.isEmpty()) {
                     emailId.setError("Enter Email");
                     emailId.requestFocus();
                 }
-                if (password.isEmpty())
-                {
+                if (password.isEmpty()) {
                     emailId.setError("Enter Password");
                     emailId.requestFocus();
                 }
-                if(!email.isEmpty() && !password.isEmpty())
-                {
-                    FbaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
+                if (!email.isEmpty() && !password.isEmpty()) {
+                    FbaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful())
-                            {
-                                Toast.makeText(Signup.this,"Login Failed",Toast.LENGTH_SHORT).show();
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(Signup.this, "Login Failed", Toast.LENGTH_SHORT).show();
                                 Log.e("DEBUG", task.getException().toString());
-                            }
-                            else{
+                            } else {
                                 //startActivity(MainActivity.this,Home.class);
-                                Intent Mainpage = new Intent(Signup.this,MainActivity.class);
+                                Intent Mainpage = new Intent(Signup.this, MainActivity.class);
                                 startActivity(Mainpage);
                             }
 
                         }
                     });
 
-                }
-                else {
-                    Toast.makeText(Signup.this,"Error",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Signup.this, "Error", Toast.LENGTH_SHORT).show();
                 }
 
             }

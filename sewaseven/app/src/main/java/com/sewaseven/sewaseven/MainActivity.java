@@ -1,5 +1,7 @@
 package com.sewaseven.sewaseven;
 //login page
+
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,10 +20,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
-    private Button signupbtn,signinbtn;
-    private EditText emailId , passwordId;
-     FirebaseAuth FbaseAuth;
-    private  FirebaseAuth.AuthStateListener authListner;
+    private Button signupbtn, signinbtn;
+    private EditText emailId, passwordId;
+    FirebaseAuth FbaseAuth;
+    private FirebaseAuth.AuthStateListener authListner;
 
 
     @Override
@@ -29,18 +31,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+//        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
+//            @Override
+//            public void handleOnBackPressed() {
+//                // Handle the back button event
+//                android.os.Process.killProcess(android.os.Process.myPid());
+//                System.exit(1);
+//                finish();
+//            }
+//        };
+//        requireActivity().MainActivity().getOnBackPressedDispatcher().addCallback(this, callback);
+
         FbaseAuth = FirebaseAuth.getInstance();
-        authListner = new FirebaseAuth.AuthStateListener() {
-            @Override
-            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-               // FirebaseUser fireUser = new FbaseAuth.getCurrentUser();
-                if (FbaseAuth.getCurrentUser() != null){
-                    Intent homeIntent = new Intent(MainActivity.this,Home.class);
-                    startActivity(homeIntent);
-                    finish();
-                }
-            }
-        };
+        FirebaseUser firebaseuser = FbaseAuth.getCurrentUser();
+        if (firebaseuser != null) {
+            Intent homeIntent = new Intent(MainActivity.this, Home.class);
+            startActivity(homeIntent);
+            finish();
+        }
+
 
         emailId = findViewById(R.id.emailtxt);
         passwordId = findViewById(R.id.editTextTextPassword);
@@ -57,46 +66,50 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String email = emailId.getText().toString();
-                String password =passwordId.getText().toString();
-                if (email.isEmpty())
-                {
+                String password = passwordId.getText().toString();
+                if (email.isEmpty()) {
                     emailId.setError("Enater Email");
                     emailId.requestFocus();
                 }
-                if (password.isEmpty())
-                {
+                if (password.isEmpty()) {
                     emailId.setError("Enater Password");
                     emailId.requestFocus();
                 }
-                if(!email.isEmpty() && !password.isEmpty())
-                {
-                    FbaseAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                if (!email.isEmpty() && !password.isEmpty()) {
+                    FbaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if(!task.isSuccessful())
-                            {
-                                Toast.makeText(MainActivity.this,"Login Failed",Toast.LENGTH_SHORT).show();
-                            }
-                            else{
-                                //startActivity(MainActivity.this,Home.class);
-                                Intent homeIntent = new Intent(MainActivity.this,Home.class);
+                            if (!task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                            } else {
+
+                                Intent homeIntent = new Intent(MainActivity.this, Home.class);
+                                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(homeIntent);
                             }
 
                         }
                     });
 
-                }
-                else {
-                    Toast.makeText(MainActivity.this,"Error",Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
     }
 
-    public  void openSignup(){
-        Intent singupIntent =new Intent(MainActivity.this, Signup.class);
+    @Override
+    public void onBackPressed() {
+
+        moveTaskToBack(true);
+
+
+    }
+
+    public void openSignup() {
+        Intent singupIntent = new Intent(MainActivity.this, Signup.class);
         startActivity(singupIntent);
     }
 }
