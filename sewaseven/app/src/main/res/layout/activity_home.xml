@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#000000"
     tools:context=".Home">
 
     <TextView
@@ -32,4 +33,39 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/empty"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight=".80"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/search"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight=".10"
+        android:background="@drawable/ic_baseline_search_24"
+        android:backgroundTint="#000000"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toStartOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/profile"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight=".10"
+        android:background="@drawable/ic_baseline_perm_identity_24"
+        android:backgroundTint="#000000"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
