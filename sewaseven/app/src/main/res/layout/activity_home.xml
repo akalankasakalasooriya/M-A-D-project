@@ -20,52 +20,55 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.499" />
 
-    <Button
-        android:id="@+id/logoutbtn"
-        android:layout_width="108dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="480dp"
-        android:background="#EA334C"
-        android:text="Logout"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/empty"
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_weight=".80"
-        android:background="#00FFFFFF"
-        app:layout_constraintEnd_toStartOf="@+id/search"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/search"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_weight=".10"
-        android:background="@drawable/ic_baseline_search_24"
-        android:backgroundTint="#000000"
-        app:layout_constraintDimensionRatio="1"
-        app:layout_constraintEnd_toStartOf="@+id/profile"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/profile"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_weight=".10"
-        android:background="@drawable/ic_baseline_perm_identity_24"
-        android:backgroundTint="#000000"
-        app:layout_constraintDimensionRatio="1:1"
+        android:background="@drawable/home_head_round_bg"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/empty"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".80"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/ic_search"
+            android:backgroundTint="#333333"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@+id/profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="3dp"
+            android:background="@drawable/ic_menu_2"
+            android:backgroundTint="#333333"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

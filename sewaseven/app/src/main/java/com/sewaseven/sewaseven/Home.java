@@ -13,34 +13,22 @@ import com.google.firebase.auth.FirebaseUser;
 import com.sewaseven.sewaseven.R;
 
 public class Home extends AppCompatActivity {
-    private Button logoutbtn;
+    private Button goToMenue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-//        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
-//            @Override
-//            public void handleOnBackPressed() {
-//                // Handle the back button event
-//                android.os.Process.killProcess(android.os.Process.myPid());
-//                System.exit(1);
-//                finish();
-//            }
-//        };
-//        new Home().getOnBackPressedDispatcher().addCallback(this, callback);
 
 
-        logoutbtn = (Button) findViewById(R.id.logoutbtn);
-        logoutbtn.setOnClickListener(new View.OnClickListener() {
+        goToMenue = (Button) findViewById(R.id.profile);
+        goToMenue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Intent loginintent = new Intent(Home.this, MainActivity.class);
-                loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(loginintent);
+
+                Intent gotoMainMenue = new Intent(Home.this, Mainmenue.class);
+                startActivity(gotoMainMenue);
 
             }
         });
