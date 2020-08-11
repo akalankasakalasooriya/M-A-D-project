@@ -7,17 +7,153 @@
     tools:context=".Mainmenue">
 
 
-    <Button
-        android:id="@+id/logoutbtn"
-        android:layout_width="104dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="492dp"
-        android:background="#EA334C"
-        android:text="Logout"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FFFFFF"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--            content            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/imageDashboard"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    app:srcCompat="@drawable/ic_television_1" />
+
+                <TextView
+                    android:id="@+id/textDashboard"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.80"
+                    android:layout_height="match_parent"
+                    android:paddingTop="50dp"
+                    android:text="Dashboard"
+                    android:paddingLeft="25dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="430dp"
+                android:layout_height="135dp"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/imageNewService"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    app:srcCompat="@drawable/ic_plus" />
+
+                <TextView
+                    android:id="@+id/textNewService"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.80"
+                    android:layout_height="match_parent"
+                    android:paddingTop="50dp"
+                    android:text="Register a New Service"
+                    android:paddingLeft="25dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="430dp"
+                android:layout_height="135dp"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/imageChangeInfo"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    app:srcCompat="@drawable/ic_settings" />
+
+                <TextView
+                    android:id="@+id/textChangeInfo"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.80"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="50dp"
+                    android:text="Change your Information"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/logoutbtn"
+                android:layout_width="430dp"
+                android:layout_height="135dp"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/imageLogOut"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.20"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    app:srcCompat="@drawable/ic_lock" />
+
+                <TextView
+                    android:id="@+id/textLogOut"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.80"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="25dp"
+                    android:paddingTop="50dp"
+                    android:text="Log Out"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <!--          end of content   -->
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
