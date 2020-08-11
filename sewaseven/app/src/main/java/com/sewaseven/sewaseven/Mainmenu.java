@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class Mainmenue extends AppCompatActivity {
+public class Mainmenu extends AppCompatActivity {
     private LinearLayout logoutbtn;
 
     @Override
@@ -24,7 +24,7 @@ public class Mainmenue extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Intent loginintent = new Intent(Mainmenue.this, MainActivity.class);
+                Intent loginintent = new Intent(Mainmenu.this, MainActivity.class);
                 loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(loginintent);
