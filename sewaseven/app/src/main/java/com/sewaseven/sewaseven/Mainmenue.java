@@ -4,12 +4,10 @@ package com.sewaseven.sewaseven;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.sewaseven.sewaseven.R;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class Mainmenue extends AppCompatActivity {
@@ -18,7 +16,7 @@ public class Mainmenue extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mainmenue);
+        setContentView(R.layout.activity_mainmenu);
 
 
         logoutbtn = findViewById(R.id.logoutbtn);

@@ -28,10 +28,10 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        homeTabs= findViewById(R.id.homeTabLayout);
-//        announcements = findViewById(R.id.home_announcements);
-//        services = findViewById(R.id.home_services);
-//        homeViewPager = findViewById(R.id.home_viewpager);
+        homeTabs= findViewById(R.id.home_tabs);
+        announcements = findViewById(R.id.home_announcements);
+        services = findViewById(R.id.home_services);
+        homeViewPager = findViewById(R.id.home_view_pager);
 
 
 
