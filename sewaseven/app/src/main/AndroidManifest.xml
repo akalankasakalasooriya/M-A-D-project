@@ -9,7 +9,13 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChangeYourInformation"></activity>
+        <activity android:name=".FeedbackAndRatings"></activity>
+        <activity android:name=".UpdateServiceDetails" />
+        <activity android:name=".DeleteService" />
+        <activity android:name=".NewAnnouncement" />
+        <activity android:name=".PreviousAnnouncement" />
+        <activity android:name=".AskedQuestions" />
+        <activity android:name=".ChangeYourInformation" />
         <activity android:name=".RegisterNewService" />
         <activity android:name=".Dashboard" />
         <activity android:name=".MainActivity" />
