@@ -7,11 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 
 public class Home extends AppCompatActivity {
+    private LinearLayout btnServiceProfile;
     private Button goToMenue;
     private TabLayout homeTabs;
     private TabItem announcements;
@@ -23,6 +25,8 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+//        tabs
         homeTabs= findViewById(R.id.home_tabs);
         announcements = findViewById(R.id.home_announcements);
         services = findViewById(R.id.home_services);
@@ -61,6 +65,15 @@ public class Home extends AppCompatActivity {
 
             }
         });
+
+//        btnServiceProfile =findViewById(R.id.linktoProfileA);
+//        btnServiceProfile.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent servicePage = new Intent(HomeAnnouncements.this,ServicePage.class);
+//                startActivity(servicePage);
+//            }
+//        });
 
 
     }

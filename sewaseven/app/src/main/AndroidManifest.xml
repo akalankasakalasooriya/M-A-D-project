@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FeedbackAndRatings"></activity>
+        <activity android:name=".ServicePage"></activity>
+        <activity android:name=".FeedbackAndRatings" />
         <activity android:name=".UpdateServiceDetails" />
         <activity android:name=".DeleteService" />
         <activity android:name=".NewAnnouncement" />

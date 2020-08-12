@@ -5,9 +5,163 @@
     android:layout_height="match_parent"
     tools:context="com.sewaseven.sewaseven.HomeServices">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+
+        android:padding="5dp"
+        android:layout_margin="3dp"
+        android:orientation="vertical">
+        <!--        content                 -->
+        <LinearLayout
+            android:background="@drawable/content_bg_round"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linktoProfileS"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:src="@drawable/ic_user_home_profile" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:paddingTop="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.80"
+                    android:text="Name Name" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_pic_home_content" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:background="@drawable/content_bg_round"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:src="@drawable/ic_user_home_profile" />
+
+                <TextView
+                    android:id="@+id/textView110"
+                    android:paddingTop="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.80"
+                    android:text="Name Name" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/imageViewss"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_pic_home_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:background="@drawable/content_bg_round"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewssw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:src="@drawable/ic_user_home_profile" />
+
+                <TextView
+                    android:id="@+id/textViewtr"
+                    android:paddingTop="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.80"
+                    android:text="Name Name" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/imageViewkkk"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_pic_home_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/content_bg_round"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewwer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:src="@drawable/ic_user_home_profile" />
+
+                <TextView
+                    android:id="@+id/textViewxcc"
+                    android:paddingTop="8dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.80"
+                    android:text="Name Name" />
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/imageViewswe"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_pic_home_content" />
+        </LinearLayout>
+
+
+        <!--        end of content             -->
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>
