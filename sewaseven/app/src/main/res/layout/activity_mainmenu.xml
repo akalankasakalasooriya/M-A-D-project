@@ -23,6 +23,7 @@
             <!--            content            -->
 
             <LinearLayout
+                android:id="@+id/btnMenueDashboard"
                 android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:orientation="horizontal"
@@ -54,7 +55,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="430dp"
+                android:id="@+id/btnMenueRegNewService"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:orientation="horizontal"
                 android:padding="3dp"
@@ -85,7 +87,8 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="430dp"
+                android:id="@+id/btnMenueChangeInfo"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:orientation="horizontal"
                 android:padding="3dp"
@@ -117,7 +120,7 @@
 
             <LinearLayout
                 android:id="@+id/logoutbtn"
-                android:layout_width="430dp"
+                android:layout_width="match_parent"
                 android:layout_height="135dp"
                 android:orientation="horizontal"
                 android:padding="3dp"

@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 public class Mainmenu extends AppCompatActivity {
+    private LinearLayout changeYrInfobtn;
+    private LinearLayout regNewSevicebtn;
+    private LinearLayout dashBoardbtn;
     private LinearLayout logoutbtn;
 
     @Override
@@ -31,5 +34,44 @@ public class Mainmenu extends AppCompatActivity {
 
             }
         });
+
+        changeYrInfobtn = findViewById(R.id.btnMenueChangeInfo);
+        changeYrInfobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent changeInfoIntent = new Intent(Mainmenu.this, ChangeYourInformation.class);
+                startActivity(changeInfoIntent);
+
+            }
+        });
+
+
+        regNewSevicebtn = findViewById(R.id.btnMenueRegNewService);
+        regNewSevicebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent regNewServiceIntent = new Intent(Mainmenu.this, RegisterNewService.class);
+                startActivity(regNewServiceIntent);
+
+            }
+        });
+
+
+        dashBoardbtn= findViewById(R.id.btnMenueDashboard);
+        dashBoardbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent dashboardIntent = new Intent(Mainmenu.this, Dashboard.class);
+                startActivity(dashboardIntent);
+
+            }
+        });
+
+
+
+
     }
 }
