@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sewaseven.sewaseven">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/sewaseven"
@@ -9,7 +11,9 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ServicePage"></activity>
+        <activity android:name=".CreateUpdateMyFeedback"></activity>
+        <activity android:name=".RatingsAndReviews" />
+        <activity android:name=".ServicePage" />
         <activity android:name=".FeedbackAndRatings" />
         <activity android:name=".UpdateServiceDetails" />
         <activity android:name=".DeleteService" />
