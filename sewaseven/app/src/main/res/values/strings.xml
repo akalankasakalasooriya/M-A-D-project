@@ -94,4 +94,12 @@
     </string>
     <string name="title_activity_asked_questions">ScrollingActivity</string>
     <string name="action_settings">Settings</string>
+    <string-array name="location">
+        <item>Colombo</item>
+        <item>Badulla</item>
+        <item>Gampaha</item>
+        <item>Kandy</item>
+        <item>Anuradhapura</item>
+        <item>Galle</item>
+    </string-array>
 </resources>
