@@ -47,14 +47,14 @@
                     app:srcCompat="@drawable/ic_info" />
 
                 <ImageButton
-                    android:id="@+id/btnFollow"
+                    android:id="@+id/btnAddRatings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/ic_star" />
 
                 <ImageButton
-                    android:id="@+id/btnAddNewAnnouncement"
+                    android:id="@+id/btnFollow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
