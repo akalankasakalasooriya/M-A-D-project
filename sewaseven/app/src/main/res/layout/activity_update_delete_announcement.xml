@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sewaseven.sewaseven.UpdateDeleteAnnouncement">
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text="Updates"
+        android:textColor="#000000"
+        android:textSize="26dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="75dp"
+        android:layout_height="81dp"
+        app:srcCompat="@drawable/icons8_user_50"
+        tools:layout_editor_absoluteX="327dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <SearchView
+        android:layout_width="289dp"
+        android:layout_height="39dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="59dp"
+        android:layout_height="43dp"
+        app:srcCompat="@drawable/icons8_order_history_64"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="59dp"
+        android:layout_height="43dp"
+        app:srcCompat="@drawable/icons8_order_history_64"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="300dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="59dp"
+        android:layout_height="43dp"
+        app:srcCompat="@drawable/icons8_order_history_64"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="450dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:background="#BED4E5"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:background="#9F7D87"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="242dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:background="#BED4E5"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:background="#9F7D87"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:background="#BED4E5"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="471dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:background="#9F7D87"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Discount - 20% off."
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sorry! We are closed today."
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="368dp" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="211dp"
+        android:layout_height="53dp"
+        android:text="Get a free mobile service
+        today."
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="509dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
