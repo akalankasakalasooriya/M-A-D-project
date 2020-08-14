@@ -29,13 +29,15 @@
                 android:layout_height="40dp" />
 
             <ImageView
-                android:padding="5dp"
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                app:srcCompat="@drawable/ic_user_6" />
+                android:padding="5dp"
+                app:srcCompat="@drawable/ic_manager" />
 
             <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
@@ -45,35 +47,35 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_edit_1" />
+                    android:backgroundTint="#fafafa"
+                    app:srcCompat="@drawable/ic_edit" />
 
                 <ImageButton
                     android:id="@+id/deleteService"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_close" />
+                    android:backgroundTint="#fafafa"
+                    app:srcCompat="@drawable/ic_icons8_trash" />
 
                 <ImageButton
                     android:id="@+id/btnPreviousAnnouncements"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_megaphone_1" />
+                    android:backgroundTint="#fafafa"
+                    app:srcCompat="@drawable/ic_megaphone" />
 
                 <ImageButton
                     android:id="@+id/btnAddNewAnnouncement"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_plus" />
+                    android:backgroundTint="#fafafa"
+                    app:srcCompat="@drawable/ic_icons8_plus" />
             </LinearLayout>
 
-            <ProgressBar
-                android:id="@+id/progressBar2"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="match_parent"
-                android:layout_height="38dp" />
+
 
             <LinearLayout
                 android:paddingBottom="5dp"

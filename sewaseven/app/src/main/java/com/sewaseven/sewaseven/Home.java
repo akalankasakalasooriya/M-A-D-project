@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabItem;
@@ -14,7 +15,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class Home extends AppCompatActivity {
     private LinearLayout btnServiceProfile;
-    private Button goToMenue;
+    private ImageButton goToMenue;
     private TabLayout homeTabs;
     private TabItem announcements;
     private TabItem services;
@@ -55,7 +56,7 @@ public class Home extends AppCompatActivity {
 
         
 
-        goToMenue = (Button) findViewById(R.id.profile);
+        goToMenue = findViewById(R.id.profile);
         goToMenue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
