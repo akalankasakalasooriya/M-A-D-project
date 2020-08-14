@@ -15,6 +15,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
@@ -54,14 +56,12 @@
                 android:text="Rating"
                 android:textSize="18sp" />
 
-            <SeekBar
-                android:id="@+id/seekBar"
-                style="@style/Widget.AppCompat.SeekBar.Discrete"
-                android:layout_width="match_parent"
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="392dp"
                 android:layout_height="wrap_content"
-                android:max="10"
-                android:progress="0"
-                android:progressTint="#E91E63" />
+                android:layout_weight="0.80" />
 
             <TextView
                 android:id="@+id/textView21"
