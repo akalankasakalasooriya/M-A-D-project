@@ -16,7 +16,7 @@
         <activity android:name=".ServicePage" />
         <activity android:name=".FeedbackAndRatings" />
         <activity android:name=".UpdateDeleteAnnouncement"></activity>
-        <activity android:name=".FeedbackAndRatings" />
+
         <activity android:name=".UpdateServiceDetails" />
         <activity android:name=".DeleteService" />
         <activity android:name=".NewAnnouncement" />
