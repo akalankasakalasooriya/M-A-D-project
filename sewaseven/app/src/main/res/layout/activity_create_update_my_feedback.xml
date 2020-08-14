@@ -7,8 +7,8 @@
     tools:context="com.sewaseven.sewaseven.CreateUpdateMyFeedback">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="657dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,9 +59,16 @@
 
             <RatingBar
                 android:id="@+id/ratingBar"
-                android:layout_width="392dp"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.80" />
+                android:layout_gravity="center"
+                android:layout_weight="0.80"
+                android:accessibilityLiveRegion="assertive"
+                android:numStars="5"
+                android:progressBackgroundTint="#978E8E"
+                android:progressTint="#FFC107"
+                android:stepSize="0.5" />
 
             <TextView
                 android:id="@+id/textView21"
