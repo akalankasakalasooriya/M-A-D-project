@@ -7,14 +7,16 @@
     tools:context="com.sewaseven.sewaseven.CreateUpdateMyFeedback">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="657dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
@@ -54,14 +56,19 @@
                 android:text="Rating"
                 android:textSize="18sp" />
 
-            <SeekBar
-                android:id="@+id/seekBar"
-                style="@style/Widget.AppCompat.SeekBar.Discrete"
-                android:layout_width="match_parent"
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@android:style/Widget.DeviceDefault.Light.RatingBar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:max="10"
-                android:progress="0"
-                android:progressTint="#E91E63" />
+                android:layout_gravity="center"
+                android:layout_weight="0.80"
+                android:accessibilityLiveRegion="assertive"
+                android:numStars="5"
+                android:progressBackgroundTint="#978E8E"
+                android:progressTint="#FFC107"
+                android:stepSize="0.5" />
 
             <TextView
                 android:id="@+id/textView21"

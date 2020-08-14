@@ -184,7 +184,7 @@
                 android:id="@+id/dashboardQuestions"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
-                android:text="questions" />
+                android:text="manage faq" />
 
             <Button
                 android:id="@+id/feedbackAndRatings"

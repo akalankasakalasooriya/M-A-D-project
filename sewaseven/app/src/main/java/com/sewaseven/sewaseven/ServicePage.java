@@ -18,6 +18,7 @@ public class ServicePage extends AppCompatActivity {
 
     private ImageButton makeCallToService;
     private ImageButton ratingsAndReviews;
+    private ImageButton btnSeeFAQ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,18 @@ public class ServicePage extends AppCompatActivity {
 
             }
         });
+
+
+        btnSeeFAQ = findViewById(R.id.btnSeeFAQ);
+        btnSeeFAQ.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent seeFAQIntent = new Intent(ServicePage.this,SeeFAQ.class);
+                startActivity(seeFAQIntent);
+
+            }
+        });
+
     }
 
 

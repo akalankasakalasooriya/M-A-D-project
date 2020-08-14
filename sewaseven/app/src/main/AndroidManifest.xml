@@ -11,12 +11,13 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateUpdateMyFeedback"></activity>
+        <activity android:name=".SeeFAQ"></activity>
+        <activity android:name=".FAQUpdate" />
+        <activity android:name=".CreateUpdateMyFeedback" />
         <activity android:name=".RatingsAndReviews" />
         <activity android:name=".ServicePage" />
         <activity android:name=".FeedbackAndRatings" />
-        <activity android:name=".UpdateDeleteAnnouncement"></activity>
-
+        <activity android:name=".UpdateDeleteAnnouncement" />
         <activity android:name=".UpdateServiceDetails" />
         <activity android:name=".DeleteService" />
         <activity android:name=".NewAnnouncement" />
