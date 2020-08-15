@@ -84,19 +84,63 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:gravity=""
                     android:id="@+id/textView5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Ratings x/5" />
+                    android:text="Ratings :" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Views xxx" />
+                    android:text="xx/5" />
             </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Total Followers :" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="xxx" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Followers on this week :" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="xxx" />
+            </LinearLayout>
+
             <LinearLayout
                 android:paddingBottom="5dp"
                 android:layout_width="match_parent"

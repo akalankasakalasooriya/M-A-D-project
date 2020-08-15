@@ -65,16 +65,18 @@
         </LinearLayout>
 
             <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:text="I delete this service from service page"
-            android:textSize="18sp" />
+                android:id="@+id/radioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+
+                android:text="reason"
+
+                android:textAlignment="viewStart"
+                android:textSize="18sp" />
 
             <RadioButton
                 android:id="@+id/radioButton1"
@@ -84,8 +86,8 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="I delete this service from service page"
+
+                android:text="reason"
                 android:textSize="18sp" />
 
             <RadioButton
@@ -96,49 +98,11 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:gravity="center_horizontal"
-                android:text="I delete this service from service page"
+                android:text="reason"
                 android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center_horizontal"
-                android:text="Enter Name"
-                android:textColor="#000000"
-                android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/editTextTextPersonName4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
-                android:text="" />
 
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:gravity="center_horizontal"
-                android:text="Enter Email"
-                android:textColor="#000000"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="60dp"
-                android:text="" />
 
             <TextView
                 android:id="@+id/textView17"
