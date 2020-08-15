@@ -34,7 +34,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Feedback"
+                    android:text="@string/feedback_heading"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="30sp"
@@ -53,7 +53,7 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rating"
+                android:text="@string/feedback_rating"
                 android:textSize="18sp" />
 
 
@@ -74,7 +74,7 @@
                 android:id="@+id/textView21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Review"
+                android:text="@string/feedback_review"
                 android:textSize="18sp" />
 
             <EditText

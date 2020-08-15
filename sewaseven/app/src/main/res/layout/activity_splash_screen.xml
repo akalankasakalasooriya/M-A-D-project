@@ -5,7 +5,7 @@
     android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EA334C"
+    android:background="@color/btn_sign_in"
     tools:context="com.sewaseven.sewaseven.SplashScreen">
 
     <ImageView

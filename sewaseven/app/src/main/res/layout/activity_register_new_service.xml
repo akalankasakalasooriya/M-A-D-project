@@ -35,7 +35,7 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="30dp"
                         android:gravity="center_horizontal"
-                        android:text="New Service"
+                        android:text="@string/new_service_heading"
                         android:textColor="#000000"
                         android:textSize="24dp"
                         android:textStyle="bold" />
@@ -71,12 +71,32 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
                 android:gravity="center_horizontal"
-                android:text="Service Name"
+                android:text="@string/new_service_name"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="@string/new_service_description"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <EditText
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
@@ -91,7 +111,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="40dp"
                 android:gravity="center_horizontal"
-                android:text="Phone Number"
+                android:text="@string/new_service_phone_number"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -111,7 +131,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="40dp"
                 android:gravity="center_horizontal"
-                android:text="Location"
+                android:text="@string/new_service_location"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -130,7 +150,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="40dp"
                 android:gravity="center_horizontal"
-                android:text="Upload Picture"
+                android:text="@string/new_service_upload_image"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -150,12 +170,12 @@
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="100dp"
-                android:layout_marginBottom="30dp" 
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/btn_background"
                 android:gravity="center_horizontal"
-                android:text="Done"
-                android:backgroundTint="#1581D6"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:text="@string/new_service_done"
+                android:textColor="@color/btn_text"
+                android:textSize="18sp" />
 
 
         </LinearLayout>

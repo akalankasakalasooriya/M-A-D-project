@@ -35,7 +35,7 @@
                         android:layout_marginLeft="30dp"
                         android:layout_marginTop="30dp"
                         android:gravity="center_horizontal"
-                        android:text="Update Service"
+                        android:text="@string/update_service_heading"
                         android:textColor="#000000"
                         android:textSize="24dp"
                         android:textStyle="bold" />
@@ -71,7 +71,27 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="30dp"
                 android:gravity="center_horizontal"
-                android:text=" New Service Name"
+                android:text="@string/update_service_name"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <EditText
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="@string/update_service_description"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -82,7 +102,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:ems="10"
-                android:inputType="textEmailAddress" />
+                android:inputType="text" />
 
             <TextView
                 android:id="@+id/textView10"
@@ -91,7 +111,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="40dp"
                 android:gravity="center_horizontal"
-                android:text="New Phone Number"
+                android:text="@string/update_service_number"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -130,7 +150,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="40dp"
                 android:gravity="center_horizontal"
-                android:text="Upload Picture"
+                android:text="@string/update_service_upload_pic"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -151,11 +171,11 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="100dp"
                 android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/btn_background"
                 android:gravity="center_horizontal"
-                android:text="Update"
-                android:backgroundTint="#1581D6"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:text="@string/update_service_update_btn"
+                android:textColor="@color/btn_text"
+                android:textSize="18sp" />
 
 
         </LinearLayout>

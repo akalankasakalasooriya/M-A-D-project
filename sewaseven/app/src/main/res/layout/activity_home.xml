@@ -30,13 +30,13 @@
             android:id="@+id/home_announcements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Announcements" />
+            android:text="@string/home_tab_Announcements" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/home_services"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Services" />
+            android:text="@string/home_tab_Services" />
 
     </com.google.android.material.tabs.TabLayout>
 

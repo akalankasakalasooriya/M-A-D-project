@@ -11,8 +11,8 @@
         android:layout_width="133dp"
         android:layout_height="49dp"
         android:layout_marginTop="356dp"
-        android:background="#EA334C"
-        android:text='Signin'
+        android:background="@color/btn_sign_in"
+        android:text='@string/login_sign_in'
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,8 +24,8 @@
         android:layout_width="133dp"
         android:layout_height="49dp"
         android:layout_marginTop="452dp"
-        android:background="#D92027"
-        android:text='Signup'
+        android:background="@color/btn_background"
+        android:text='@string/login_sign_up'
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/login_email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/login_password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

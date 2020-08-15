@@ -42,7 +42,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text="Name Name" />
+                    android:text="@string/home_name" />
 
             </LinearLayout>
             <ImageView
@@ -80,7 +80,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text="Name Name" />
+                    android:text="@string/home_name" />
 
             </LinearLayout>
             <ImageView
@@ -117,7 +117,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text="Name Name" />
+                    android:text="@string/home_name" />
 
             </LinearLayout>
             <ImageView
@@ -153,7 +153,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text="Name Name" />
+                    android:text="@string/home_name" />
 
             </LinearLayout>
             <ImageView

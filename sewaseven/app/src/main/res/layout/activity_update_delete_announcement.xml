@@ -31,7 +31,7 @@
                     android:id="@+id/textView22"
                     android:layout_width="264dp"
                     android:layout_height="39dp"
-                    android:text="Edit Announcement"
+                    android:text="@string/edit_announcement_heading"
                     android:textColor="#000000"
                     android:textSize="26dp"
                     android:textStyle="bold" />
@@ -58,7 +58,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Discription :"
+                    android:text="@string/edit_announcement_description"
                     android:textColor="@color/colorPrimary"
                     android:textSize="18dp"
                     tools:layout_editor_absoluteX="32dp"
@@ -75,7 +75,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Select Banner :"
+                    android:text="@string/edit_announcement_select_image"
                     android:textColor="@color/colorPrimary"
                     android:textSize="18dp"
                     tools:layout_editor_absoluteX="32dp"
@@ -85,8 +85,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    app:srcCompat="@drawable/icons8_order_history_64"
-                     />
+                    app:srcCompat="@drawable/ic_picture" />
 
 
                 <ImageButton
@@ -103,19 +102,21 @@
 
                     <Button
 
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Update"
-                        android:background="#BED4E5"
-                     />
+                        android:layout_weight="1"
+                        android:background="@color/btn_background"
+                        android:text="@string/edit_announcement_update"
+                        android:textColor="@color/btn_text" />
 
                     <Button
 
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Delete"
-                        android:background="#9F7D87"
-                         />
+                        android:layout_weight="1"
+                        android:background="@color/btn_sign_in"
+                        android:text="@string/edit_announcement_delete"
+                        android:textColor="@color/btn_text" />
 
                 </LinearLayout>
 

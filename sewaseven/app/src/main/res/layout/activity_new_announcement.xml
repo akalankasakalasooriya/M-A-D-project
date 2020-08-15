@@ -22,6 +22,7 @@
 
 
             <LinearLayout
+                android:paddingTop="5dp"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -30,7 +31,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="New Announcement"
+                    android:text="@string/new_announcement_heading"
                     android:textSize="26dp"
                     android:textColor="#000000"
                     android:textStyle="bold"
@@ -49,10 +50,11 @@
 <!--            end of head-->
 
             <TextView
+                android:layout_marginTop="10dp"
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Discription :"
+                android:text="@string/new_announcement_description"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -66,10 +68,10 @@
                  />
 
             <TextView
-
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add Image :"
+                android:text="@string/new_announcement_add_image"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -77,19 +79,28 @@
                 android:id="@+id/imageButton1"
                 android:layout_width="match_parent"
                 android:layout_height="157dp"
-                app:srcCompat="@drawable/icons8_add_image_64"
+                app:srcCompat="@drawable/ic_picture"
                 tools:layout_editor_absoluteX="65dp"
                 tools:layout_editor_absoluteY="341dp" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/btn_background"
+                android:text="@string/new_announcement_select_image"
+                android:textColor="@color/btn_text"
+ />
 
             <Button
-                android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="POST"
-                android:background="#161A5F"
-                android:textColor="#ffffff"
-                tools:layout_editor_absoluteX="169dp"
-                tools:layout_editor_absoluteY="554dp" />
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@color/btn_background"
+                android:text="@string/new_announcement_post"
+                android:textColor="@color/btn_text"
+ />
 
 
 

@@ -1,6 +1,78 @@
 <resources>
     <string name="app_name">Sewa seven</string>
     <!-- TODO: Remove or change this placeholder text -->
+
+<!--    AKALANKA-->
+    <string name="feedback_heading">Feedback</string>
+    <string name="feedback_rating">Rating</string>
+    <string name="feedback_review">Review</string>
+
+
+    <string name="feedback_and_ratings_heading">Feedback</string>
+    <string name="feedback_and_ratings_name">Name Name</string>
+    <string name="feedback_and_ratings_rating">x.x/5</string>
+    <string name="feedback_and_ratings_comment">comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment</string>
+
+    <string name="home_tab_Announcements">Announcements</string>
+    <string name="home_tab_Services">Services</string>
+
+
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_sign_in">Sign In</string>
+    <string name="login_sign_up">Sign Up</string>
+
+    <string name="main_menu">Main Menu</string>
+    <string name="main_menu_dashboard">Dashboard</string>
+    <string name="main_menu_new_service">Register a New Service</string>
+    <string name="main_menu_change_info">Change Your Information</string>
+    <string name="main_menu_log_out">LogOut</string>
+    <string name="main_menu_about">About</string>
+
+
+    <string name="sign_up_name">Name</string>
+    <string name="sign_up_email">Email</string>
+    <string name="sign_up_password">Password</string>
+    <string name="sign_up_SignUP">Done</string>
+
+
+    <string name="home_name">Name Name</string>
+
+
+
+<!--    /AKALANKA-->
+
+
+<!--    ANJANA-->
+    <string name="created_sample_question">Question Question Question</string>
+    <string name="FAQ_update_txt">Update</string>
+    <string name="FAQ_delete_txt">Delete</string>
+    <string name="FAQ_ans_txt">Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question</string>
+    <string name="FAQ_heading_txt">FAQ</string>
+
+
+    <string name="update_FAQ_heading_txt">Update FAQ</string>
+    <string name="update_FAQ_question">Question</string>
+    <string name="update_FAQ_answer">Answer</string>
+    <string name="update_FAQ_done">DONE</string>
+
+
+    <string name="see_faq_heading">FAQ</string>
+    <string name="see_faq_question">question question question ?</string>
+    <string name="see_faq_ans">answer to the question answer to the question answer to the question answer to the question answer to the question</string>
+
+
+<!--    /ANJANA-->
+
+
+<!--    KANCHILA-->
+    <string name="change_info_heading">Setings</string>
+    <string name="change_info_name">Enter Name</string>
+    <string name="change_info_email">Enter Email</string>
+    <string name="change_info_password">Enter New Password</string>
+    <string name="change_info_re_password">Re Enter New Password</string>
+    <string name="change_info_update_btn">Update</string>
+
     <string-array name="location">
         <item>Colombo</item>
         <item>Badulla</item>
@@ -9,4 +81,81 @@
         <item>Anuradhapura</item>
         <item>Galle</item>
     </string-array>
+
+
+
+    <string name="service_dashboard_ratings">Ratings :</string>
+    <string name="service_dashboard_total_followers">Total Followers :</string>
+    <string name="service_dashboard_followers_this_week">Followers on This Week :</string>
+    <string name="service_dashboard_name">Name / Company Name :</string>
+    <string name="service_dashboard_phone">Phone Number :</string>
+    <string name="service_dashboard_location">Location :</string>
+    <string name="service_dashboard_mail">Email :</string>
+    <string name="service_dashboard_faq_btn">manage faq</string>
+    <string name="service_dashboard_feedback_nd_ratings">Feedback and Ratings</string>
+    <string name="service_dashboard_data1">xx/5</string>
+    <string name="service_dashboard_data2">xxx</string>
+    <string name="service_dashboard_data3">xxxxx</string>
+    <string name="service_dashboard_description">Description</string>
+
+
+    <string name="delete_service_heading">Delete Service</string>
+    <string name="delete_service_r1">Reason 1</string>
+    <string name="delete_service_r2">Reason 3</string>
+    <string name="delete_service_r3">Reason 3</string>
+    <string name="delete_service_enter_password">Enter Password</string>
+    <string name="delete_service_confirm">Confirm Delete</string>
+
+
+    <string name="new_service_heading">New Service</string>
+    <string name="new_service_name">Service Name</string>
+    <string name="new_service_description">Description</string>
+    <string name="new_service_phone_number">Phone Number</string>
+    <string name="new_service_location">Location</string>
+    <string name="new_service_upload_image">Upload Image</string>
+    <string name="new_service_done">Done</string>
+
+
+    <string name="update_service_heading">Update Service</string>
+    <string name="update_service_name">Service Name</string>
+    <string name="update_service_description">Description</string>
+    <string name="update_service_number">Phone Number</string>
+    <string name="update_service_location">Location</string>
+    <string name="update_service_upload_pic">Picture</string>
+    <string name="update_service_update_btn">update</string>
+
+
+<!--    /KANCHILA-->
+
+
+
+
+<!--    RESHIKA-->
+    <string name="new_announcement_heading">New Announcement</string>
+    <string name="new_announcement_description">Description :</string>
+    <string name="new_announcement_add_image">Add Image :</string>
+    <string name="new_announcement_select_image">Select Picture</string>
+    <string name="new_announcement_post">Publish</string>
+
+
+
+    <string name="announcement_history_heading">Announcement History</string>
+    <string name="announcement_history_total">Total Announcements</string>
+    <string name="announcement_history_on_this_week">Announcements On This Week</string>
+    <string name="announcement_history_update">Update</string>
+    <string name="announcement_history_t1">Discount - 20% off.</string>
+    <string name="announcement_history_t2">Sorry! We are closed today.</string>
+    <string name="announcement_history_t3">Get a free mobile service today</string>
+    <string name="announcement_history_data">xxx</string>
+
+
+    <string name="edit_announcement_heading">Edit Announcement</string>
+    <string name="edit_announcement_description">Description</string>
+    <string name="edit_announcement_select_image">Select Image</string>
+    <string name="edit_announcement_update">update</string>
+    <string name="edit_announcement_delete">delete</string>
+
+
+<!--    RESHIKA-->
+
 </resources>

@@ -32,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="5dp"
-                    android:text="Announcement History"
+                    android:text="@string/announcement_history_heading"
                     android:textAlignment="viewStart"
                     android:textColor="#000000"
                     android:textSize="26dp"
@@ -60,14 +60,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Total Announcements :" />
+                    android:text="@string/announcement_history_total" />
 
                 <TextView
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxx" />
+                    android:text="@string/announcement_history_data" />
             </LinearLayout>
 
             <LinearLayout
@@ -81,14 +81,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Announcements on this week :" />
+                    android:text="@string/announcement_history_on_this_week" />
 
                 <TextView
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxx" />
+                    android:text="@string/announcement_history_data" />
             </LinearLayout>
 
 
@@ -109,7 +109,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Discount - 20% off."
+                    android:text="@string/announcement_history_t1"
                     android:textSize="18dp"
                     tools:layout_editor_absoluteX="32dp"
                     tools:layout_editor_absoluteY="221dp" />
@@ -125,14 +125,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageButton
+                    <TextView
                         android:id="@+id/edit_announcement"
-                        android:layout_width="match_parent"
-                        android:layout_height="63dp"
-                        android:backgroundTint="#FFFFFF"
-                        app:srcCompat="@drawable/ic_edit"
-                        tools:layout_editor_absoluteX="336dp"
-                        tools:layout_editor_absoluteY="290dp" />
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+
+                        android:text="@string/announcement_history_update"
+                        android:textColor="@color/btn_background" />
 
                 </LinearLayout>
 
@@ -153,7 +153,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sorry! We are closed today."
+                    android:text="@string/announcement_history_t2"
                     android:textSize="18dp"
                     tools:layout_editor_absoluteX="32dp"
                     tools:layout_editor_absoluteY="221dp" />
@@ -169,14 +169,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageButton
+                    <TextView
 
-                        android:layout_width="match_parent"
-                        android:layout_height="63dp"
-                        android:backgroundTint="#FFFFFF"
-                        app:srcCompat="@drawable/ic_edit"
-                        tools:layout_editor_absoluteX="336dp"
-                        tools:layout_editor_absoluteY="290dp" />
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+
+                        android:text="@string/announcement_history_update"
+                        android:textColor="@color/btn_background" />
 
                 </LinearLayout>
 
@@ -197,8 +197,8 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Get a free mobile service today"
-                    android:textSize="18dp"
+                    android:text="@string/announcement_history_t3"
+                    android:textSize="18sp"
                     tools:layout_editor_absoluteX="32dp"
                     tools:layout_editor_absoluteY="221dp" />
 
@@ -213,14 +213,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageButton
+                    <TextView
 
-                        android:layout_width="match_parent"
-                        android:layout_height="63dp"
-                        android:backgroundTint="#FFFFFF"
-                        app:srcCompat="@drawable/ic_edit"
-                        tools:layout_editor_absoluteX="336dp"
-                        tools:layout_editor_absoluteY="290dp" />
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+
+                        android:text="@string/announcement_history_update"
+                        android:textColor="@color/btn_background" />
 
                 </LinearLayout>
 
@@ -241,7 +241,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Discount - 20% off."
+                    android:text="@string/announcement_history_t1"
                     android:textSize="18dp"
                     tools:layout_editor_absoluteX="32dp"
                     tools:layout_editor_absoluteY="221dp" />
@@ -257,14 +257,14 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <ImageButton
+                    <TextView
 
-                        android:layout_width="match_parent"
-                        android:layout_height="63dp"
-                        android:backgroundTint="#FFFFFF"
-                        app:srcCompat="@drawable/ic_edit"
-                        tools:layout_editor_absoluteX="336dp"
-                        tools:layout_editor_absoluteY="290dp" />
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+
+                        android:text="@string/announcement_history_update"
+                        android:textColor="@color/btn_background" />
 
                 </LinearLayout>
 

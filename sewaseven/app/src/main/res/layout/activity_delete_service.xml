@@ -35,7 +35,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="30dp"
                     android:gravity="center_horizontal"
-                    android:text="Delete Service"
+                    android:text="@string/delete_service_heading"
                     android:textColor="#000000"
                     android:textSize="24dp"
                     android:textStyle="bold" />
@@ -73,7 +73,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
 
-                android:text="reason"
+                android:text="@string/delete_service_r1"
 
                 android:textAlignment="viewStart"
                 android:textSize="18sp" />
@@ -87,7 +87,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
 
-                android:text="reason"
+                android:text="@string/delete_service_r2"
                 android:textSize="18sp" />
 
             <RadioButton
@@ -98,7 +98,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_weight="1"
-                android:text="reason"
+                android:text="@string/delete_service_r3"
                 android:textSize="18sp" />
 
 
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"
-                android:text="Enter Password"
+                android:text="@string/delete_service_enter_password"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -128,13 +128,13 @@
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="100dp"
-                android:layout_marginLeft="100dp"
-                android:backgroundTint="#1581D6"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:text="Confirm Delete" />
+                android:background="@color/btn_background"
+                android:text="@string/delete_service_confirm"
+                android:textColor="@color/btn_text"
+                android:textSize="18sp" />
 
 
         </LinearLayout>>

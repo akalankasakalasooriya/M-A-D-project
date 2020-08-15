@@ -31,10 +31,10 @@
 
                 <TextView
 
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="FAQ"
+                    android:text="@string/FAQ_heading_txt"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -64,7 +64,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/created_sample_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -75,7 +75,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                        android:text="@string/FAQ_ans_txt" />
 
                 <LinearLayout
                     android:paddingLeft="3dp"
@@ -91,7 +91,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Update"
+                        android:text="@string/FAQ_update_txt"
                         android:textColor="#2196F3"
                          />
 
@@ -100,7 +100,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Delete"
+                        android:text="@string/FAQ_delete_txt"
                         android:textColor="#E91E63" />
                 </LinearLayout>
 
@@ -122,7 +122,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/created_sample_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -133,7 +133,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/FAQ_ans_txt"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -148,7 +148,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Update"
+                        android:text="@string/FAQ_update_txt"
                         android:textColor="#2196F3"
                         />
 
@@ -157,7 +157,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Delete"
+                        android:text="@string/FAQ_delete_txt"
                         android:textColor="#E91E63" />
                 </LinearLayout>
 
@@ -179,7 +179,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/created_sample_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -190,7 +190,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/FAQ_ans_txt" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -205,7 +205,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Update"
+                        android:text="@string/FAQ_update_txt"
                         android:textColor="#2196F3"
                         />
 
@@ -214,7 +214,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Delete"
+                        android:text="@string/FAQ_delete_txt"
                         android:textColor="#E91E63" />
                 </LinearLayout>
 
@@ -236,7 +236,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/created_sample_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -247,7 +247,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/FAQ_ans_txt" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -262,7 +262,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Update"
+                        android:text="@string/FAQ_update_txt"
                         android:textColor="#2196F3"
                         />
 
@@ -271,7 +271,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Delete"
+                        android:text="@string/FAQ_delete_txt"
                         android:textColor="#E91E63" />
                 </LinearLayout>
 
@@ -293,7 +293,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/created_sample_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -304,7 +304,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/FAQ_ans_txt" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -319,7 +319,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Update"
+                        android:text="@string/FAQ_update_txt"
                         android:textColor="#2196F3"
                         />
 
@@ -328,7 +328,7 @@
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
 
-                        android:text="Delete"
+                        android:text="@string/FAQ_delete_txt"
                         android:textColor="#E91E63" />
                 </LinearLayout>
 

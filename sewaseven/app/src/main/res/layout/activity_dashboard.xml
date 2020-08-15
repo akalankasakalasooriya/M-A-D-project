@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:padding="5dp"
-                app:srcCompat="@drawable/ic_manager" />
+                app:srcCompat="@drawable/ic_car" />
 
             <LinearLayout
                 android:layout_marginTop="20dp"
@@ -89,14 +89,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Ratings :" />
+                    android:text="@string/service_dashboard_ratings"/>
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xx/5" />
+                    android:text="@string/service_dashboard_data1" />
             </LinearLayout>
 
             <LinearLayout
@@ -110,14 +110,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Total Followers :" />
+                    android:text="@string/service_dashboard_total_followers" />
 
                 <TextView
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxx" />
+                    android:text="@string/service_dashboard_data2" />
             </LinearLayout>
 
             <LinearLayout
@@ -131,14 +131,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Followers on this week :" />
+                    android:text="@string/service_dashboard_followers_this_week" />
 
                 <TextView
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxx" />
+                    android:text="@string/service_dashboard_data2" />
             </LinearLayout>
 
             <LinearLayout
@@ -152,14 +152,34 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Name/ Company Name" />
+                    android:text="@string/service_dashboard_name" />
 
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxxxx" />
+                    android:text="@string/service_dashboard_data3" />
+            </LinearLayout>
+            <LinearLayout
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/service_dashboard_description" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/service_dashboard_data3" />
             </LinearLayout>
             <LinearLayout
                 android:paddingBottom="5dp"
@@ -172,14 +192,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Phone" />
+                    android:text="@string/service_dashboard_phone" />
 
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxxxx" />
+                    android:text="@string/service_dashboard_data3" />
             </LinearLayout>
 
             <LinearLayout
@@ -193,14 +213,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Location" />
+                    android:text="@string/service_dashboard_location" />
 
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxxxx" />
+                    android:text="@string/service_dashboard_data3" />
             </LinearLayout>
 
             <LinearLayout
@@ -214,27 +234,31 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="E mail" />
+                    android:text="@string/service_dashboard_mail" />
 
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxxxx" />
+                    android:text="@string/service_dashboard_data3" />
             </LinearLayout>
 
             <Button
                 android:id="@+id/dashboardQuestions"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
-                android:text="manage faq" />
+                android:backgroundTint="#2962FF"
+                android:text="@string/service_dashboard_faq_btn"
+                android:textColor="#FFFFFF" />
 
             <Button
                 android:id="@+id/feedbackAndRatings"
                 android:layout_width="match_parent"
                 android:layout_height="62dp"
-                android:text="feedback And Ratings" />
+                android:backgroundTint="#2962FF"
+                android:text="@string/service_dashboard_feedback_nd_ratings"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
     </ScrollView>

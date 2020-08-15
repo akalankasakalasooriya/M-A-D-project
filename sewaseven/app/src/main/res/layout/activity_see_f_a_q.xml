@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="FAQ"
+                    android:text="@string/see_faq_heading"
                     android:textColor="#000000"
                     android:textSize="30sp"
                     android:textStyle="bold" />
@@ -42,7 +42,7 @@
                     android:id="@+id/imageView8"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-
+                    android:layout_marginBottom="5dp"
                     app:srcCompat="@drawable/ic_question_mark" />
             </LinearLayout>
 
@@ -65,7 +65,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/see_faq_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -76,7 +76,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/see_faq_ans" />
 
 
 
@@ -100,7 +100,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/see_faq_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/see_faq_ans" />
 
 
 
@@ -135,7 +135,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/see_faq_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -146,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/see_faq_ans" />
 
 
 
@@ -170,7 +170,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/see_faq_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -181,7 +181,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/see_faq_ans" />
 
 
 
@@ -205,7 +205,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/see_faq_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -216,7 +216,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/see_faq_ans" />
 
 
 
@@ -240,7 +240,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.80"
                     android:paddingTop="8dp"
-                    android:text="Question Question Question"
+                    android:text="@string/see_faq_question"
                     android:textColor="#000000"
                     android:textStyle="bold" />
 
@@ -251,7 +251,42 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"
-                    android:text=" Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question" />
+                    android:text="@string/see_faq_ans" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/content_bg_round"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.80"
+                    android:paddingTop="8dp"
+                    android:text="@string/see_faq_question"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:paddingTop="8dp"
+                    android:layout_margin="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.80"
+                    android:text="@string/see_faq_ans" />
 
 
 

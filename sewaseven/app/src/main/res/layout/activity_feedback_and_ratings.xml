@@ -31,7 +31,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Feedback"
+                    android:text="@string/feedback_and_ratings_heading"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="30sp"
@@ -75,7 +75,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="Name Name" />
+                        android:text="@string/feedback_and_ratings_name" />
 
                 </LinearLayout>
 
@@ -91,7 +91,7 @@
                         android:layout_margin="5dp"
                         android:layout_weight="0.80"
                         android:paddingTop="8dp"
-                        android:text="x.x/10"
+                        android:text="@string/feedback_and_ratings_rating"
                         android:textStyle="bold" />
 
                     <TextView
@@ -101,7 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="asked question asked question asked question asked question asked question asked question " />
+                        android:text="@string/feedback_and_ratings_comment" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -131,7 +131,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="Name Name" />
+                        android:text="@string/feedback_and_ratings_name" />
 
                 </LinearLayout>
 
@@ -147,7 +147,7 @@
                         android:layout_margin="5dp"
                         android:layout_weight="0.80"
                         android:paddingTop="8dp"
-                        android:text="x.x/10"
+                        android:text="@string/feedback_and_ratings_rating"
                         android:textStyle="bold" />
 
                     <TextView
@@ -157,7 +157,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="asked question asked question asked question asked question asked question asked question " />
+                        android:text="@string/feedback_and_ratings_comment" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -187,7 +187,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="Name Name" />
+                        android:text="@string/feedback_and_ratings_name" />
 
                 </LinearLayout>
 
@@ -203,7 +203,7 @@
                         android:layout_margin="5dp"
                         android:layout_weight="0.80"
                         android:paddingTop="8dp"
-                        android:text="x.x/10"
+                        android:text="@string/feedback_and_ratings_rating"
                         android:textStyle="bold" />
 
                     <TextView
@@ -213,7 +213,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="asked question asked question asked question asked question asked question asked question " />
+                        android:text="@string/feedback_and_ratings_comment" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -243,7 +243,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="Name Name" />
+                        android:text="@string/feedback_and_ratings_name" />
 
                 </LinearLayout>
 
@@ -259,7 +259,7 @@
                         android:layout_margin="5dp"
                         android:layout_weight="0.80"
                         android:paddingTop="8dp"
-                        android:text="x.x/10"
+                        android:text="@string/feedback_and_ratings_rating"
                         android:textStyle="bold" />
 
                     <TextView
@@ -269,7 +269,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="asked question asked question asked question asked question asked question asked question " />
+                        android:text="@string/feedback_and_ratings_comment" />
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
@@ -299,7 +299,7 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="Name Name" />
+                        android:text="@string/feedback_and_ratings_name" />
 
                 </LinearLayout>
 
@@ -315,7 +315,7 @@
                         android:layout_margin="5dp"
                         android:layout_weight="0.80"
                         android:paddingTop="8dp"
-                        android:text="x.x/10"
+                        android:text="@string/feedback_and_ratings_rating"
                         android:textStyle="bold" />
 
                     <TextView
@@ -325,7 +325,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0.80"
-                        android:text="asked question asked question asked question asked question asked question asked question " />
+                        android:text="@string/feedback_and_ratings_comment" />
                 </LinearLayout>
             </LinearLayout>
 

@@ -32,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Update FAQ"
+                    android:text="@string/update_FAQ_heading_txt"
                     android:textAlignment="center"
                     android:textColor="@color/colorPrimary"
                     android:textSize="30sp"
@@ -51,7 +51,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Question :"
+                android:text="@string/update_FAQ_question"
                 android:textColor="#000000" />
 
             <EditText
@@ -66,7 +66,7 @@
                 android:layout_marginTop="40dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Answer :"
+                android:text="@string/update_FAQ_answer"
                 android:textColor="#000000" />
 
             <EditText
@@ -78,10 +78,13 @@
                 android:inputType="textMultiLine" />
 
             <Button
+                android:layout_marginTop="80dp"
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Done" />
+                android:background="@color/btn_background"
+                android:text="@string/update_FAQ_done"
+                android:textColor="@color/btn_text" />
 
 
         </LinearLayout>
