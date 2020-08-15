@@ -1,7 +1,6 @@
 package com.sewaseven.sewaseven;
 //login page
 
-import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,12 +13,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     private Button signupbtn, signinbtn;
     private EditText emailId, passwordId;
     FirebaseAuth FbaseAuth;
@@ -31,21 +29,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        OnBackPressedCallback callback = new OnBackPressedCallback(true /* enabled by default */) {
-//            @Override
-//            public void handleOnBackPressed() {
-//                // Handle the back button event
-//                android.os.Process.killProcess(android.os.Process.myPid());
-//                System.exit(1);
-//                finish();
-//            }
-//        };
-//        requireActivity().MainActivity().getOnBackPressedDispatcher().addCallback(this, callback);
 
         FbaseAuth = FirebaseAuth.getInstance();
         FirebaseUser firebaseuser = FbaseAuth.getCurrentUser();
         if (firebaseuser != null) {
-            Intent homeIntent = new Intent(MainActivity.this, Home.class);
+            Intent homeIntent = new Intent(Login.this, Home.class);
             startActivity(homeIntent);
             finish();
         }
@@ -68,22 +56,22 @@ public class MainActivity extends AppCompatActivity {
                 String email = emailId.getText().toString();
                 String password = passwordId.getText().toString();
                 if (email.isEmpty()) {
-                    emailId.setError("Enater Email");
+                    emailId.setError("Enter Email");
                     emailId.requestFocus();
                 }
                 if (password.isEmpty()) {
-                    emailId.setError("Enater Password");
-                    emailId.requestFocus();
+                    emailId.setError("Enter Password");
+                    passwordId.requestFocus();
                 }
                 if (!email.isEmpty() && !password.isEmpty()) {
-                    FbaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
+                    FbaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
-                                Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Login.this, "Login Failed", Toast.LENGTH_SHORT).show();
                             } else {
 
-                                Intent homeIntent = new Intent(MainActivity.this, Home.class);
+                                Intent homeIntent = new Intent(Login.this, Home.class);
                                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 homeIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(homeIntent);
@@ -93,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                     });
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this, "Error", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -109,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openSignup() {
-        Intent singupIntent = new Intent(MainActivity.this, Signup.class);
+        Intent singupIntent = new Intent(Login.this, Signup.class);
         startActivity(singupIntent);
     }
 }

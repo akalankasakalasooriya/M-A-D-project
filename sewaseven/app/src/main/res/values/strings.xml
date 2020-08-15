@@ -39,6 +39,16 @@
     <string name="home_name">Name Name</string>
 
 
+    <string-array name="services">
+        <item>service 1</item>
+        <item>service 2</item>
+        <item>service 3</item>
+        <item>service 4</item>
+        <item>service 5</item>
+        <item>service 6</item>
+    </string-array>
+
+
 
 <!--    /AKALANKA-->
 
@@ -120,7 +130,6 @@
     <string name="update_service_name">Service Name</string>
     <string name="update_service_description">Description</string>
     <string name="update_service_number">Phone Number</string>
-    <string name="update_service_location">Location</string>
     <string name="update_service_upload_pic">Picture</string>
     <string name="update_service_update_btn">update</string>
 

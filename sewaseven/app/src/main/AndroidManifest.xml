@@ -26,7 +26,7 @@
         <activity android:name=".ChangeYourInformation" />
         <activity android:name=".RegisterNewService" />
         <activity android:name=".Dashboard" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Login" />
         <activity android:name=".Mainmenu" />
         <activity android:name=".Home" />
         <activity android:name=".Signup" />

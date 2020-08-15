@@ -4,13 +4,12 @@
     <color name="colorPrimaryDark">#535252</color>
     <color name="colorAccent">#333333</color>
 <!--    -->
-    <color name="btn_background">#2962FF</color>
+    <color name="btn_background">#4285F4</color>
     <color name="btn_text">#ffffff</color>
 
 
-    <color name="btn_sign_in">#EA334C</color>
-    <color name="btn_sign_up">#D92027</color>
+    <color name="btn_sign_in">#DB4437</color>
 
 
-<!--    -->
+    <!--    -->
 </resources>

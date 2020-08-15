@@ -41,8 +41,8 @@ public class Signup extends AppCompatActivity {
                     emailId.requestFocus();
                 }
                 if (password.isEmpty()) {
-                    emailId.setError("Enter Password");
-                    emailId.requestFocus();
+                    passwordId.setError("Enter Password");
+                    passwordId.requestFocus();
                 }
                 if (!email.isEmpty() && !password.isEmpty()) {
                     FbaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
@@ -50,10 +50,10 @@ public class Signup extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(Signup.this, "Login Failed", Toast.LENGTH_SHORT).show();
-                                Log.e("DEBUG", task.getException().toString());
+                                //Log.e("DEBUG", task.getException().toString());
                             } else {
-                                //startActivity(MainActivity.this,Home.class);
-                                Intent Mainpage = new Intent(Signup.this, MainActivity.class);
+                                //startActivity(Login.this,Home.class);
+                                Intent Mainpage = new Intent(Signup.this, Login.class);
                                 startActivity(Mainpage);
                             }
 

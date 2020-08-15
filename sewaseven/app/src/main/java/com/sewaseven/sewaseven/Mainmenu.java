@@ -27,7 +27,7 @@ public class Mainmenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Intent loginintent = new Intent(Mainmenu.this, MainActivity.class);
+                Intent loginintent = new Intent(Mainmenu.this, Login.class);
                 loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(loginintent);

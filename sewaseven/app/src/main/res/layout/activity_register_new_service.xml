@@ -165,14 +165,15 @@
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="100dp"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/btn_background"
-                android:gravity="center_horizontal"
+
+                android:padding="15dp"
                 android:text="@string/new_service_done"
                 android:textColor="@color/btn_text"
                 android:textSize="18sp" />
