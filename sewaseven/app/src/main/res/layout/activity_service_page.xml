@@ -74,7 +74,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:text="Details"
+                android:text="@string/service_page_details"
                 android:textColor="@color/colorPrimary"
                 android:textSize="24sp" />
 
@@ -90,14 +90,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Ratings x/5" />
+                    android:text="@string/service_page_rating" />
 
                 <TextView
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Views xxx" />
+                    android:text="@string/service_page_views" />
             </LinearLayout>
             <LinearLayout
                 android:paddingBottom="5dp"
@@ -110,14 +110,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Name/ Company Name" />
+                    android:text="@string/service_page_name" />
 
                 <TextView
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxxxx" />
+                    android:text="@string/service_page_data" />
             </LinearLayout>
             <LinearLayout
                 android:paddingBottom="5dp"
@@ -130,35 +130,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="Phone" />
+                    android:text="@string/service_page_phone" />
 
                 <TextView
 
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="xxxxx" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:paddingBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:text="Location" />
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:text="xxxxx" />
+                    android:text="@string/service_page_data" />
             </LinearLayout>
 
             <LinearLayout
@@ -172,7 +151,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="E mail" />
+                    android:text="@string/service_page_location" />
 
                 <TextView
 
@@ -180,6 +159,27 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:text="xxxxx" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/service_page_email" />
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="@string/service_page_data" />
             </LinearLayout>
 
 
@@ -190,7 +190,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
-                android:text="Announcements"
+                android:text="@string/service_page_announcement"
                 android:textColor="@color/colorPrimary"
                 android:textSize="24sp" />
 

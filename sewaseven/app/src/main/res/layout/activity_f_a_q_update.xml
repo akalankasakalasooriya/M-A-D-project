@@ -78,10 +78,10 @@
                 android:inputType="textMultiLine" />
 
             <Button
-                android:layout_marginTop="80dp"
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
                 android:background="@color/btn_background"
                 android:text="@string/update_FAQ_done"
                 android:textColor="@color/btn_text" />
