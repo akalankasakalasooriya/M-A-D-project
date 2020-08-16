@@ -47,6 +47,16 @@
                     app:srcCompat="@drawable/ic_question_mark" />
             </LinearLayout>
 
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/butn_add_new_Faq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btn_background"
+                android:text="@string/new_faq_heading"
+                android:textColor="@color/btn_text" />
+
 <!--            faq start-->
 
             <LinearLayout

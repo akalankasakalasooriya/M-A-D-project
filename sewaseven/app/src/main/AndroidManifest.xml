@@ -11,7 +11,9 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SeeFAQ"></activity>
+        <activity android:name=".About"></activity>
+        <activity android:name=".AddNewFaq" />
+        <activity android:name=".SeeFAQ" />
         <activity android:name=".FAQUpdate" />
         <activity android:name=".CreateUpdateMyFeedback" />
         <activity android:name=".RatingsAndReviews" />

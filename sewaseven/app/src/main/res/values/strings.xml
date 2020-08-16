@@ -2,7 +2,7 @@
     <string name="app_name">Sewa seven</string>
     <!-- TODO: Remove or change this placeholder text -->
 
-<!--    AKALANKA-->
+    <!--    AKALANKA-->
     <string name="feedback_heading">Feedback</string>
     <string name="feedback_rating">Rating</string>
     <string name="feedback_review">Review</string>
@@ -33,10 +33,15 @@
     <string name="sign_up_name">Name</string>
     <string name="sign_up_email">Email</string>
     <string name="sign_up_password">Password</string>
-    <string name="sign_up_SignUP">Done</string>
+    <string name="sign_up_SignUP">Sign Up</string>
 
 
     <string name="home_name">Name Name</string>
+
+    <string name="rating_list_new_btn">Create or update your feedback</string>
+    <string name="rating_list_Name">Name Name</string>
+    <string name="rating_list_rating">xx/5</string>
+    <string name="rating_list_comment">comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment</string>
 
 
     <string-array name="services">
@@ -49,16 +54,16 @@
     </string-array>
 
 
+    <!--    /AKALANKA-->
 
-<!--    /AKALANKA-->
 
-
-<!--    ANJANA-->
+    <!--    ANJANA-->
     <string name="created_sample_question">Question Question Question</string>
     <string name="FAQ_update_txt">Update</string>
     <string name="FAQ_delete_txt">Delete</string>
     <string name="FAQ_ans_txt">Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question</string>
     <string name="FAQ_heading_txt">FAQ</string>
+    <!--    <string name="FAQ_add_new">add new faq</string>-->
 
 
     <string name="update_FAQ_heading_txt">Update FAQ</string>
@@ -71,11 +76,21 @@
     <string name="see_faq_question">question question question ?</string>
     <string name="see_faq_ans">answer to the question answer to the question answer to the question answer to the question answer to the question</string>
 
+    <string name="new_faq_heading">Add New FAQ</string>
 
-<!--    /ANJANA-->
+    <string name="about_heading">About</string>
+    <string name="about_txt">“Sewaseven” is a mobile application developed for service providers to provide their work through an online platform. Service providers and the customers can log in to this application using their own login credentials. Service providers can publish their services, announcements, and provide service details at the FAQ session whereas, the customers can get services, give ratings, and provide feedback to the service providers.
+
+This is a user-friendly application that can be used anywhere at any time using a mobile phone. This would be beneficial for the customers to find out their service providers easily and quickly.
+
+For example, if a customer needs to repair his/her mobile phone they can find out a service provider according to their preferred budget and contact them. A customer can also check the ratings of service providers.
+</string>
 
 
-<!--    KANCHILA-->
+    <!--    /ANJANA-->
+
+
+    <!--    KANCHILA-->
     <string name="change_info_heading">Setings</string>
     <string name="change_info_name">Enter Name</string>
     <string name="change_info_email">Enter Email</string>
@@ -91,7 +106,6 @@
         <item>Anuradhapura</item>
         <item>Galle</item>
     </string-array>
-
 
 
     <string name="service_dashboard_ratings">Ratings :</string>
@@ -134,18 +148,15 @@
     <string name="update_service_update_btn">update</string>
 
 
-<!--    /KANCHILA-->
+    <!--    /KANCHILA-->
 
 
-
-
-<!--    RESHIKA-->
+    <!--    RESHIKA-->
     <string name="new_announcement_heading">New Announcement</string>
     <string name="new_announcement_description">Description :</string>
     <string name="new_announcement_add_image">Add Image :</string>
     <string name="new_announcement_select_image">Select Picture</string>
     <string name="new_announcement_post">Publish</string>
-
 
 
     <string name="announcement_history_heading">Announcement History</string>
@@ -165,6 +176,6 @@
     <string name="edit_announcement_delete">delete</string>
 
 
-<!--    RESHIKA-->
+    <!--    RESHIKA-->
 
 </resources>

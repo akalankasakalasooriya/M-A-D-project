@@ -15,6 +15,7 @@ public class Mainmenu extends AppCompatActivity {
     private LinearLayout regNewSevicebtn;
     private LinearLayout dashBoardbtn;
     private LinearLayout logoutbtn;
+    private LinearLayout aboutAppbtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +71,17 @@ public class Mainmenu extends AppCompatActivity {
             }
         });
 
+
+        aboutAppbtn= findViewById(R.id.aboutApp);
+        aboutAppbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent aboutIntent = new Intent(Mainmenu.this, About.class);
+                startActivity(aboutIntent);
+
+            }
+        });
 
 
 
