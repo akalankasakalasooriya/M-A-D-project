@@ -59,7 +59,7 @@ public class Login extends AppCompatActivity {
                     emailId.setError("Enter Email");
                     emailId.requestFocus();
                 }
-                if (password.isEmpty()) {
+                else if (password.isEmpty()) {
                     emailId.setError("Enter Password");
                     passwordId.requestFocus();
                 }

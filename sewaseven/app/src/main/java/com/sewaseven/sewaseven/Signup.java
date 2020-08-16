@@ -44,6 +44,11 @@ public class Signup extends AppCompatActivity {
                     passwordId.setError("Enter Password");
                     passwordId.requestFocus();
                 }
+                else if(password.length()<=6)
+                    {
+                        passwordId.setError("Weak Password");
+                        Toast.makeText(Signup.this, "Weak Password. Use more than 6 characters", Toast.LENGTH_SHORT).show();
+                }
                 if (!email.isEmpty() && !password.isEmpty()) {
                     FbaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(Signup.this, new OnCompleteListener<AuthResult>() {
                         @Override
