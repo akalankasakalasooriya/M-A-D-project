@@ -6,337 +6,55 @@
     android:layout_height="match_parent"
     tools:context="com.sewaseven.sewaseven.FeedbackAndRatings">
 
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal">
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/feedback_and_ratings_heading"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/ic_feedback_ratings" />
-            </LinearLayout>
-
-
-
-<!--            content     -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/feedbacklist"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="4dp"
-                android:scrollbars="vertical"/>
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:src="@drawable/ic_user_home_profile" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_name" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"  >
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_weight="0.80"
-                        android:paddingTop="8dp"
-                        android:text="@string/feedback_and_ratings_rating"
-                        android:textStyle="bold" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_margin="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_comment" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:src="@drawable/ic_user_home_profile" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_name" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"  >
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_weight="0.80"
-                        android:paddingTop="8dp"
-                        android:text="@string/feedback_and_ratings_rating"
-                        android:textStyle="bold" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_margin="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_comment" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:src="@drawable/ic_user_home_profile" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_name" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"  >
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_weight="0.80"
-                        android:paddingTop="8dp"
-                        android:text="@string/feedback_and_ratings_rating"
-                        android:textStyle="bold" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_margin="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_comment" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:src="@drawable/ic_user_home_profile" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_name" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"  >
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_weight="0.80"
-                        android:paddingTop="8dp"
-                        android:text="@string/feedback_and_ratings_rating"
-                        android:textStyle="bold" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_margin="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_comment" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <LinearLayout
-
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0.20"
-                        android:src="@drawable/ic_user_home_profile" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_name" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"  >
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_margin="5dp"
-                        android:layout_weight="0.80"
-                        android:paddingTop="8dp"
-                        android:text="@string/feedback_and_ratings_rating"
-                        android:textStyle="bold" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_margin="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/feedback_and_ratings_comment" />
-                </LinearLayout>
-            </LinearLayout>
-
-<!--            end of content -->
-
+                android:layout_weight="1"
+                android:text="@string/feedback_and_ratings_heading"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ic_feedback_ratings" />
         </LinearLayout>
-    </ScrollView>
+
+        <!--            content     -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feedbacklist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:scrollbars="vertical"
+            />
+
+        <!--            end of content -->
+
+    </LinearLayout>
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

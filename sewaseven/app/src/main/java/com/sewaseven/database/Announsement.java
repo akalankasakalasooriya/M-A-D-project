@@ -1,13 +1,15 @@
 package com.sewaseven.database;
 
-import com.google.type.DateTime;
+
+
+import java.util.Date;
 
 public class Announsement {
     private String description;
     private String imagePath;
-    private DateTime publishedDate;
+    private Date publishedDate;
 
-    public Announsement(String description, String imagePath, DateTime publishedDate) {
+    public Announsement(String description, String imagePath, Date publishedDate) {
         this.description = description;
         this.imagePath = imagePath;
         this.publishedDate = publishedDate;
@@ -21,7 +23,7 @@ public class Announsement {
         return imagePath;
     }
 
-    public DateTime getPublishedDate() {
+    public Date getPublishedDate() {
         return publishedDate;
     }
 }

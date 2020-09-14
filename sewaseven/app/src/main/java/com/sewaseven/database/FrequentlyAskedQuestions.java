@@ -1,14 +1,14 @@
 package com.sewaseven.database;
 
-import com.google.type.DateTime;
+import java.util.Date;
 
 public class FrequentlyAskedQuestions {
     private String question;
     private String answers;
     private String service_id;
-    private DateTime date_time;
+    private Date date_time;
 
-    public FrequentlyAskedQuestions(String question, String answers, String service_id, DateTime date_time) {
+    public FrequentlyAskedQuestions(String question, String answers, String service_id, Date date_time) {
         this.question = question;
         this.answers = answers;
         this.service_id = service_id;
@@ -27,7 +27,7 @@ public class FrequentlyAskedQuestions {
         return service_id;
     }
 
-    public DateTime getDate_time() {
+    public Date getDate_time() {
         return date_time;
     }
 }
