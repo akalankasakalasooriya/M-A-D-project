@@ -58,7 +58,7 @@
 
 
             <RatingBar
-                android:id="@+id/ratingBar"
+                android:id="@+id/my_feedback_ratingBar"
                 style="@android:style/Widget.DeviceDefault.Light.RatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -78,6 +78,7 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/my_feedback_comment"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 />
@@ -91,7 +92,7 @@
 
 
                 <ImageButton
-                    android:id="@+id/imageButton"
+                    android:id="@+id/my_feedback_done"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -99,7 +100,7 @@
                     app:srcCompat="@drawable/ic_icons8_checkmark" />
 
                 <ImageButton
-                    android:id="@+id/imageButton2"
+                    android:id="@+id/my_feedback_cancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

@@ -1,16 +1,23 @@
 package com.sewaseven.database;
 
+import com.google.firebase.firestore.IgnoreExtraProperties;
+import com.google.firebase.firestore.ServerTimestamp;
+
+import java.util.Date;
+
+@IgnoreExtraProperties
 public class FeedbackAndRatingsModel {
     private String posted_user_id;
     private String rating;
     private String comment;
-
+    private @ServerTimestamp Date serverTimeStamp;
 
 
     public FeedbackAndRatingsModel() {
         this.posted_user_id = "";
         this.rating = "";
         this.comment = "";
+        serverTimeStamp = null;
     }
 
 
@@ -18,6 +25,14 @@ public class FeedbackAndRatingsModel {
         this.posted_user_id = posted_user_id;
         this.rating = rating;
         this.comment = comment;
+    }
+
+    public Date getServerTimeStamp() {
+        return serverTimeStamp;
+    }
+
+    public void setServerTimeStamp(Date serverTimeStamp) {
+        this.serverTimeStamp = serverTimeStamp;
     }
 
     public String getPosted_user_id() {
