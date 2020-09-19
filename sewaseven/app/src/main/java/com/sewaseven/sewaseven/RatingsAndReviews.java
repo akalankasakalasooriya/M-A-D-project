@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -61,6 +62,7 @@ public class RatingsAndReviews extends AppCompatActivity {
             @Override
             public RatingsAndReviews.service_feedbackAndRating_viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
                 View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_feedbacklist_ratings_feedback,parent,false);
+                Log.e("info", "------------------onCreateViewHolder------------------------------------");
                 return new RatingsAndReviews.service_feedbackAndRating_viewHolder(view);
             }
 
@@ -69,7 +71,7 @@ public class RatingsAndReviews extends AppCompatActivity {
                 feedbackAndRating_viewHolder.name.setText(feedbackAndRating.getPosted_user_id());
                 feedbackAndRating_viewHolder.rating.setText(feedbackAndRating.getRating());
                 feedbackAndRating_viewHolder.comment.setText(feedbackAndRating.getComment());
-                //Log.i("info","data bind called"+feedbackAndRating.getPosted_user_id());
+                Log.e("info", "------------------onBindViewHolder------------------------------------");
             }
         };
 

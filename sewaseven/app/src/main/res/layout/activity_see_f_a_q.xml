@@ -6,300 +6,56 @@
     android:layout_height="match_parent"
     tools:context="com.sewaseven.sewaseven.SeeFAQ">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
 
+            <TextView
 
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/see_faq_heading"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/see_faq_heading"
-                    android:textColor="#000000"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    app:srcCompat="@drawable/ic_question_mark" />
-            </LinearLayout>
-
-            <!--            faq start-->
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:orientation="vertical">
+                app:srcCompat="@drawable/ic_question_mark" />
 
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/see_faq_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/see_faq_ans" />
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/see_faq_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/see_faq_ans" />
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/see_faq_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/see_faq_ans" />
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/see_faq_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/see_faq_ans" />
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/see_faq_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/see_faq_ans" />
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/see_faq_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/see_faq_ans" />
-
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/see_faq_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/see_faq_ans" />
-
-
-
-
-            </LinearLayout>
-
-
-
-            <!--            faq end-->
 
         </LinearLayout>
 
+        <!--            faq start-->
 
-    </ScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/see_FAQ_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
+
+        <!--            faq end-->
+
+    </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

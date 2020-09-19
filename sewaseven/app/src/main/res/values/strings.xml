@@ -37,9 +37,6 @@
 
 
     <string name="rating_list_new_btn">Create or update your feedback</string>
-    <string name="rating_list_Name">Name Name</string>
-    <string name="rating_list_rating">xx/5</string>
-    <string name="rating_list_comment">comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment comment</string>
 
 
     <string name="service_page_details">Details</string>
