@@ -68,7 +68,7 @@ public class RatingsAndReviews extends AppCompatActivity {
 
             @Override
             protected void onBindViewHolder(@NonNull RatingsAndReviews.service_feedbackAndRating_viewHolder feedbackAndRating_viewHolder, int i, @NonNull FeedbackAndRatingsModel feedbackAndRating) {
-                feedbackAndRating_viewHolder.name.setText(feedbackAndRating.getPosted_user_id());
+                feedbackAndRating_viewHolder.name.setText(feedbackAndRating.getPosted_user_name());
                 feedbackAndRating_viewHolder.rating.setText(feedbackAndRating.getRating());
                 feedbackAndRating_viewHolder.comment.setText(feedbackAndRating.getComment());
                 Log.e("info", "------------------onBindViewHolder------------------------------------");

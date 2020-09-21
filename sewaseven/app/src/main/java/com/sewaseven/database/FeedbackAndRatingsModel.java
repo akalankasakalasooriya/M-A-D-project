@@ -7,6 +7,7 @@ import java.util.Date;
 
 @IgnoreExtraProperties
 public class FeedbackAndRatingsModel {
+    private String posted_user_name;
     private String posted_user_id;
     private String rating;
     private String comment;
@@ -18,13 +19,15 @@ public class FeedbackAndRatingsModel {
         this.rating = "";
         this.comment = "";
         serverTimeStamp = null;
+        this.posted_user_name= "";
     }
 
 
-    public FeedbackAndRatingsModel(String posted_user_id, String rating, String comment) {
+    public FeedbackAndRatingsModel(String posted_user_id, String rating, String comment , String posted_user_name) {
         this.posted_user_id = posted_user_id;
         this.rating = rating;
         this.comment = comment;
+        this.posted_user_name = posted_user_name;
     }
 
     public Date getServerTimeStamp() {
@@ -57,5 +60,13 @@ public class FeedbackAndRatingsModel {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public String getPosted_user_name() {
+        return posted_user_name;
+    }
+
+    public void setPosted_user_name(String posted_user_name) {
+        this.posted_user_name = posted_user_name;
     }
 }
