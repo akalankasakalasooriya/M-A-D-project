@@ -107,4 +107,14 @@ public class RatingsAndReviews extends AppCompatActivity {
         super.onStart();
         firestoreRecyclerAdapter.startListening();
     }
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        Intent servicePage = new Intent(RatingsAndReviews.this, Home.class);
+        servicePage.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(servicePage);
+    }
 }
+
+

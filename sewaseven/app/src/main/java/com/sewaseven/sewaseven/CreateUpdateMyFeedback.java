@@ -197,7 +197,8 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
-        Intent servicePage = new Intent(CreateUpdateMyFeedback.this, ServicePage.class);
+        Intent servicePage = new Intent(CreateUpdateMyFeedback.this, RatingsAndReviews.class);
+        servicePage.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(servicePage);
     }
 }
