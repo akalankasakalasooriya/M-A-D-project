@@ -2,8 +2,11 @@ package com.sewaseven.database;
 
 import com.google.firebase.firestore.IgnoreExtraProperties;
 
+import java.io.Serializable;
+
 @IgnoreExtraProperties
-public class FAQModel {
+public class FAQModel implements Serializable {
+    private String docID;
     private String answer;
     private String question;
 
@@ -31,5 +34,13 @@ public class FAQModel {
 
     public void setQuestion(String question) {
         this.question = question;
+    }
+
+    public String getDocID() {
+        return docID;
+    }
+
+    public void setDocID(String docID) {
+        this.docID = docID;
     }
 }

@@ -32,7 +32,7 @@ public class AddNewFaq extends AppCompatActivity {
         setContentView(R.layout.activity_add_new_faq);
 
         btn_add= findViewById(R.id.newFAQ_save_btn);
-        question = findViewById(R.id.newFAQ_answer);
+        question = findViewById(R.id.newFAQ_question);
         answer = findViewById(R.id.newFAQ_answer);
          db = FirebaseFirestore.getInstance();
 

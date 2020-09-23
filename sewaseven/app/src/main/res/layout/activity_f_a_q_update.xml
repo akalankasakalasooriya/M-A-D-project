@@ -55,7 +55,7 @@
                 android:textColor="#000000" />
 
             <EditText
-
+                android:id="@+id/txt_update_faq_q"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -70,7 +70,7 @@
                 android:textColor="#000000" />
 
             <EditText
-
+                android:id="@+id/txt_update_faq_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
