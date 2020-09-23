@@ -1,5 +1,6 @@
 package com.sewaseven.sewaseven;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -9,9 +10,17 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class ServicePage extends AppCompatActivity {
 
@@ -19,6 +28,7 @@ public class ServicePage extends AppCompatActivity {
     private ImageButton makeCallToService;
     private ImageButton ratingsAndReviews;
     private ImageButton btnSeeFAQ;
+    private TextView avgRating;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +65,33 @@ public class ServicePage extends AppCompatActivity {
 
             }
         });
+
+        //get service avg
+        avgRating = findViewById(R.id.service_page_avg_rating);
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+        db.collection("Feedback").limit(20).orderBy("serverTimeStamp")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            int count = 0;
+                            float sum =(float) 0.0, average = (float) 0.0;
+
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                //Log.d("TAG", document.getId() + " => " + document.getData());
+                                //
+                                count++;
+                                sum += Float.parseFloat(document.getString("rating"));
+                                average = sum/(float)count;
+                            }
+                            avgRating.setText("Ratings "+String.valueOf(average));
+                        } else {
+                            Log.w("TAG", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
 
     }
 

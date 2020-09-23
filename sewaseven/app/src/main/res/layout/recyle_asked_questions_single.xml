@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--            faq start-->
+
+    <LinearLayout
+        android:layout_margin="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/content_bg_round"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/asked_questions_single_question"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.80"
+            android:paddingTop="8dp"
+            android:text="@string/created_sample_question"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/asked_questions_single_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="0.80"
+            android:paddingTop="8dp"
+            android:text="@string/FAQ_ans_txt" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.80"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp">
+
+
+            <TextView
+                android:id="@+id/FAQUpdate"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+
+                android:text="@string/FAQ_update_txt"
+                android:textColor="#2196F3" />
+            <TextView
+                android:id="@+id/FAQdocumentID"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="@string/FAQ_update_txt"
+                android:textColor="#2196F3" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <!--            faq end-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

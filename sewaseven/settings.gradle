@@ -1,2 +1,3 @@
+include ':app:webImageLibrary'
 include ':app'
 rootProject.name = "sewa seven"

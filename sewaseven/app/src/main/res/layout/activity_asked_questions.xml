@@ -7,350 +7,60 @@
     tools:context="com.sewaseven.sewaseven.AskedQuestions">
 
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <LinearLayout
+            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
+            <TextView
 
-            <LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/FAQ_heading_txt"
-                    android:textColor="#000000"
-                    android:textSize="30sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-
-                    app:srcCompat="@drawable/ic_question_mark" />
-            </LinearLayout>
-
-            <Button
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/butn_add_new_Faq"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@color/btn_background"
-                android:text="@string/new_faq_heading"
-                android:textColor="@color/btn_text" />
-
-<!--            faq start-->
-
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/created_sample_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                    <TextView
-
-                        android:paddingTop="8dp"
-                        android:layout_margin="5dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_weight="0.80"
-                        android:text="@string/FAQ_ans_txt" />
-
-                <LinearLayout
-                    android:paddingLeft="3dp"
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:id="@+id/FAQUpdate"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_update_txt"
-                        android:textColor="#2196F3"
-                         />
-
-                    <TextView
-                        android:id="@+id/textView25"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_delete_txt"
-                        android:textColor="#E91E63" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/created_sample_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/FAQ_ans_txt"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:paddingLeft="3dp"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_update_txt"
-                        android:textColor="#2196F3"
-                        />
-
-                    <TextView
-
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_delete_txt"
-                        android:textColor="#E91E63" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/created_sample_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/FAQ_ans_txt" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-                        android:paddingLeft="3dp"
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_update_txt"
-                        android:textColor="#2196F3"
-                        />
-
-                    <TextView
-
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_delete_txt"
-                        android:textColor="#E91E63" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/created_sample_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/FAQ_ans_txt" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_update_txt"
-                        android:textColor="#2196F3"
-                        />
-
-                    <TextView
-
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_delete_txt"
-                        android:textColor="#E91E63" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:background="@drawable/content_bg_round"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="5dp"
-                android:orientation="vertical">
-
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_margin="5dp"
-                    android:layout_weight="0.80"
-                    android:paddingTop="8dp"
-                    android:text="@string/created_sample_question"
-                    android:textColor="#000000"
-                    android:textStyle="bold" />
-
-                <TextView
-
-                    android:paddingTop="8dp"
-                    android:layout_margin="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:text="@string/FAQ_ans_txt" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.80"
-                    android:orientation="horizontal">
-
-
-                    <TextView
-
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_update_txt"
-                        android:textColor="#2196F3"
-                        />
-
-                    <TextView
-
-                        android:layout_width="80dp"
-                        android:layout_height="wrap_content"
-
-                        android:text="@string/FAQ_delete_txt"
-                        android:textColor="#E91E63" />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-
-
-<!--            faq end-->
-
+                android:layout_weight="1"
+                android:text="@string/FAQ_heading_txt"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+
+                app:srcCompat="@drawable/ic_question_mark" />
         </LinearLayout>
 
+        <Button
+            android:id="@+id/butn_add_new_Faq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/btn_background"
+            android:text="@string/new_faq_heading"
+            android:textColor="@color/btn_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-    </ScrollView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/asked_questions_list"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

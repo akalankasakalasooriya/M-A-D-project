@@ -77,14 +77,30 @@
                 android:gravity="start|top"
                 android:inputType="textMultiLine" />
 
-            <Button
-                android:id="@+id/button3"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:background="@color/btn_background"
-                android:text="@string/update_FAQ_done"
-                android:textColor="@color/btn_text" />
+                android:layout_height="match_parent"
+                android:background="#FAFAFA"
+                android:backgroundTint="#FAFAFA"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/FAQ_done"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#fafafa"
+                    app:srcCompat="@drawable/ic_icons8_checkmark" />
+
+                <ImageButton
+                    android:id="@+id/FAQ_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#fafafa"
+                    app:srcCompat="@drawable/ic_icons8_trash" />
+            </LinearLayout>
 
 
         </LinearLayout>
