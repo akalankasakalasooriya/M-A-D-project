@@ -15,7 +15,7 @@
         <activity android:name=".About"></activity>
         <activity android:name=".AddNewFaq" />
         <activity android:name=".SeeFAQ" />
-        <activity android:name=".FAQUpdate" />
+        <activity android:name=".FAQUpdate" android:parentActivityName=".AskedQuestions"></activity>
         <activity android:name=".CreateUpdateMyFeedback" />
         <activity android:name=".RatingsAndReviews" />
         <activity android:name=".ServicePage" />
