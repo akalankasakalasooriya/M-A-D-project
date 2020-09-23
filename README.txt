@@ -4,4 +4,4 @@ kanchila 	**main funtion = CRUD on manage servises (one regular user can create 
 
 reshika 	**main function = CRUD on services' announcements**
 
-anjana		**CRUD on FAQ**
+anjana		**CRUD on FAQ **
