@@ -177,7 +177,7 @@ For example, if a customer needs to repair his/her mobile phone they can find ou
     <string name="announcement_history_data">xxx</string>
 
 
-    <string name="edit_announcement_heading">Edit Announcement</string>
+    <string name="edit_announcement_heading">Delete Announcement</string>
     <string name="edit_announcement_description">Description</string>
     <string name="edit_announcement_select_image">Select Image</string>
     <string name="edit_announcement_update">update</string>

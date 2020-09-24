@@ -22,15 +22,20 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.ServerTimestamp;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.google.type.DateTime;
 import com.sewaseven.additional.UID;
+import com.sewaseven.database.Announsement;
 import com.sewaseven.database.User;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,6 +46,7 @@ public class NewAnnouncement extends AppCompatActivity {
     private ImageView selectedImg;
     public Uri imguri;
     private StorageReference mStorageRef;
+    protected Announsement announsement = new Announsement();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,12 +136,12 @@ public class NewAnnouncement extends AppCompatActivity {
                                             tempUser.setLastName(document.getString("l_name"));
 
 
-                                            ////////////////////////////////
 
                                             String txtdescription_value = String.valueOf(description.getText());
                                             Map<String, Object> announcement = new HashMap<>();
                                             announcement.put("description", txtdescription_value);
                                             announcement.put("imagePath",imgURL[0]);
+                                            announcement.put("serverTimeStamp",System.currentTimeMillis());
                                             announcement.put("name", tempUser.getFirstName()+" "+tempUser.getLastName());
                                             announcement.put("proPicPath", "https://firebasestorage.googleapis.com/v0/b/sewa-seven.appspot.com/o/propic.jpg?alt=media&token=fde461a5-f26c-40bf-b318-b9a8e4cedb19");
 
@@ -143,6 +149,7 @@ public class NewAnnouncement extends AppCompatActivity {
                                             db.collection("Announcement")
                                                     .add(announcement)
                                                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+
                                                         @Override
                                                         public void onSuccess(DocumentReference documentReference) {
                                                             Log.e("TAG", "DocumentSnapshot added with ID: " + documentReference.getId());
@@ -157,6 +164,7 @@ public class NewAnnouncement extends AppCompatActivity {
                                                             Log.e("TAG", "Error adding document", e);
                                                         }
                                                     });
+
 
                                         }
                                     } else {

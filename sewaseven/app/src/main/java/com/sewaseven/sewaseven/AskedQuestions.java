@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AskedQuestions extends AppCompatActivity {
-    TextView txtFAQUpdate;
     Button newFAQ;
     ///////
     private FirebaseFirestore firebaseFirestore;

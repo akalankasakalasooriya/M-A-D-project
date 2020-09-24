@@ -64,56 +64,35 @@
                     tools:layout_editor_absoluteX="32dp"
                     tools:layout_editor_absoluteY="221dp" />
 
-                <EditText
-                    android:id="@+id/editTextTextPersonName3"
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/del_ansment_data"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:text=".."
                     android:inputType="textPersonName" />
 
-                <TextView
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/edit_announcement_select_image"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="18dp"
-                    tools:layout_editor_absoluteX="32dp"
-                    tools:layout_editor_absoluteY="221dp" />
 
                 <ImageView
-
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/announcements_history_img"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
+                    android:layout_height="wrap_content"
                     app:srcCompat="@drawable/ic_picture" />
 
 
-                <ImageButton
-                    android:id="@+id/imageButton3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/design_default_color_background"
-                    app:srcCompat="@drawable/ic_icons8_plus" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <Button
-
-                        android:layout_width="0dp"
+                        android:id="@+id/announcements_history_delete"
+                        android:layout_marginTop="50dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/btn_background"
-                        android:text="@string/edit_announcement_update"
-                        android:textColor="@color/btn_text" />
-
-                    <Button
-
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:background="@color/btn_sign_in"
                         android:text="@string/edit_announcement_delete"
                         android:textColor="@color/btn_text" />

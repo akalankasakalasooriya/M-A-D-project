@@ -5,17 +5,19 @@ package com.sewaseven.database;
 import com.google.firebase.firestore.IgnoreExtraProperties;
 import com.google.firebase.firestore.ServerTimestamp;
 
+import java.io.Serializable;
 import java.util.Date;
 @IgnoreExtraProperties
-public class Announsement {
+public class Announsement implements Serializable {
+    private String DocID;
     private String name;
     private String description;
     private String imagePath;
     private String proPicPath;
-    private @ServerTimestamp Date serverTimeStamp;
+    private Long serverTimeStamp;
     private  String publishedby;
 
-    public Announsement(String name, String description, String imagePath, String proPicPath, Date serverTimeStamp, String publishedby) {
+    public Announsement(String name, String description, String imagePath, String proPicPath, Long serverTimeStamp, String publishedby) {
         this.name = name;
         this.description = description;
         this.imagePath = imagePath;
@@ -48,11 +50,11 @@ public class Announsement {
         this.imagePath = imagePath;
     }
 
-    public Date getServerTimeStamp() {
+    public Long getServerTimeStamp() {
         return serverTimeStamp;
     }
 
-    public void setServerTimeStamp(Date serverTimeStamp) {
+    public void setServerTimeStamp(Long serverTimeStamp) {
         this.serverTimeStamp = serverTimeStamp;
     }
 
@@ -78,5 +80,13 @@ public class Announsement {
 
     public void setProPicPath(String proPicPath) {
         this.proPicPath = proPicPath;
+    }
+
+    public String getDocID() {
+        return DocID;
+    }
+
+    public void setDocID(String docID) {
+        DocID = docID;
     }
 }
