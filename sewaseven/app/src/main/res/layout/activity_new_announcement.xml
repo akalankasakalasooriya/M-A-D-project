@@ -59,6 +59,7 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:id="@+id/descriptionTxt"
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,14 +76,15 @@
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
-            <ImageButton
-                android:id="@+id/imageButton1"
+            <ImageView
+                android:id="@+id/img_show_selected_btn"
                 android:layout_width="match_parent"
                 android:layout_height="157dp"
                 app:srcCompat="@drawable/ic_picture"
                 tools:layout_editor_absoluteX="65dp"
                 tools:layout_editor_absoluteY="341dp" />
             <Button
+                android:id="@+id/btn_select_ans_img"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -93,6 +95,7 @@
  />
 
             <Button
+                android:id="@+id/btn_publish_ans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
