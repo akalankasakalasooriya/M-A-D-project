@@ -40,7 +40,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnAskedQuestions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent dashboardQuestionsIntent = new Intent(Dashboard.this,AskedQuestions.class);
+                Intent dashboardQuestionsIntent = new Intent(Dashboard.this, AskedQuestions.class);
                 startActivity(dashboardQuestionsIntent);
             }
         });
@@ -50,7 +50,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         previousAnnouncements.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent PreviousAnnouncementsIntent = new Intent(Dashboard.this,PreviousAnnouncement.class);
+                Intent PreviousAnnouncementsIntent = new Intent(Dashboard.this, PreviousAnnouncement.class);
                 startActivity(PreviousAnnouncementsIntent);
             }
         });
@@ -60,7 +60,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnAddNewAnnouncement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addNewAnnouncementIntent = new Intent(Dashboard.this,NewAnnouncement.class);
+                Intent addNewAnnouncementIntent = new Intent(Dashboard.this, NewAnnouncement.class);
                 startActivity(addNewAnnouncementIntent);
             }
         });
@@ -70,7 +70,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnDeleteService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent deleteServiceIntent = new Intent(Dashboard.this,DeleteService.class);
+                Intent deleteServiceIntent = new Intent(Dashboard.this, DeleteService.class);
                 startActivity(deleteServiceIntent);
             }
         });
@@ -80,18 +80,17 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnUpdateServiceDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent updateServiceDetailsIntent = new Intent(Dashboard.this,UpdateServiceDetails.class);
+                Intent updateServiceDetailsIntent = new Intent(Dashboard.this, UpdateServiceDetails.class);
                 startActivity(updateServiceDetailsIntent);
             }
         });
-
 
 
         btnFeedbackAndRatings = findViewById(R.id.feedbackAndRatings);
         btnFeedbackAndRatings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent updateServiceDetailsIntent = new Intent(Dashboard.this,FeedbackAndRatings.class);
+                Intent updateServiceDetailsIntent = new Intent(Dashboard.this, FeedbackAndRatings.class);
                 startActivity(updateServiceDetailsIntent);
             }
         });
@@ -113,14 +112,14 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             int count = 0;
-                            float sum =(float) 0.0, average = (float) 0.0;
+                            float sum = (float) 0.0, average = (float) 0.0;
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 //Log.d("TAG", document.getId() + " => " + document.getData());
                                 //avgServiceRating
                                 count++;
                                 sum += Float.parseFloat(document.getString("rating"));
-                                average = sum/(float)count;
+                                average = sum / (float) count;
                             }
                             avgServiceRating.setText(String.valueOf(average));
                         } else {

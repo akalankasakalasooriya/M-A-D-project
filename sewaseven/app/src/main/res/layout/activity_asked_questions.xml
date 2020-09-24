@@ -42,8 +42,28 @@
                 android:layout_height="wrap_content"
 
                 app:srcCompat="@drawable/ic_question_mark" />
-        </LinearLayout>
 
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/faq_history_total" />
+
+            <TextView
+                android:id="@+id/faq_history_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/announcement_history_data" />
+        </LinearLayout>
         <Button
             android:id="@+id/butn_add_new_Faq"
             android:layout_width="match_parent"

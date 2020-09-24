@@ -29,7 +29,7 @@ import com.squareup.picasso.Picasso;
 
 public class HomeAnnouncements extends Fragment {
     FirebaseFirestore firebaseFirestore;
-    private  View announcement_view;
+    private View announcement_view;
     private RecyclerView my_announcement_list;
 
     //////////
@@ -46,17 +46,16 @@ public class HomeAnnouncements extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-    {
-        announcement_view =inflater.inflate(R.layout.fragment_announcements_home, container, false);
-        View announcement_single =inflater.inflate(R.layout.recycle_announcement_single, container, false);
-        my_announcement_list = (RecyclerView)announcement_view.findViewById(R.id.home_recycle_announcement);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        announcement_view = inflater.inflate(R.layout.fragment_announcements_home, container, false);
+        View announcement_single = inflater.inflate(R.layout.recycle_announcement_single, container, false);
+        my_announcement_list = (RecyclerView) announcement_view.findViewById(R.id.home_recycle_announcement);
         my_announcement_list.setLayoutManager(new LinearLayoutManager(getContext()));
         ///////////////////////
-        name_= announcement_single.findViewById(R.id.home_recycle_announcement_pro_name);
-        description_ =announcement_single.findViewById(R.id.home_recycle_announcement_pro_caption);
-        announcement_pic_ =announcement_single.findViewById(R.id.home_recycle_announcement_pic);
-        profile_pic_ =announcement_single.findViewById(R.id.home_recycle_announcement_pro_pic);
+        name_ = announcement_single.findViewById(R.id.home_recycle_announcement_pro_name);
+        description_ = announcement_single.findViewById(R.id.home_recycle_announcement_pro_caption);
+        announcement_pic_ = announcement_single.findViewById(R.id.home_recycle_announcement_pic);
+        profile_pic_ = announcement_single.findViewById(R.id.home_recycle_announcement_pro_pic);
 
         return announcement_view;
     }
@@ -64,7 +63,6 @@ public class HomeAnnouncements extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
 
     }
@@ -75,21 +73,6 @@ public class HomeAnnouncements extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        Button btnServiceProfile;
-
-        btnServiceProfile = getView().findViewById(R.id.linktoProfileA);
-        btnServiceProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent servicePage = new Intent(getActivity(), ServicePage.class);
-                startActivity(servicePage);
-            }
-        });
-        ////////////////////////////////////////////////////
-
-
-        ///////////////////////////////////////////////
-        ///////////////////////////////////////////////
 
 
 
@@ -98,16 +81,20 @@ public class HomeAnnouncements extends Fragment {
     private class accouncements_view_holder extends RecyclerView.ViewHolder {
 
 
-        TextView name=name_;
-        TextView description=description_;
-        ImageView announcement_pic=announcement_pic_;
-        ImageView profile_pic=profile_pic_;
+        TextView name = name_;
+        TextView description = description_;
+        ImageView announcement_pic = announcement_pic_;
+        ImageView profile_pic = profile_pic_;
+
         public accouncements_view_holder(View view) {
             super(view);
             name = (TextView) view.findViewById(R.id.home_recycle_announcement_pro_name);
-            description =(TextView)view.findViewById(R.id.home_recycle_announcement_pro_caption);;
-            announcement_pic =(ImageView) view.findViewById(R.id.home_recycle_announcement_pic);;
-            profile_pic =(ImageView) view.findViewById(R.id.home_recycle_announcement_pro_pic);;
+            description = (TextView) view.findViewById(R.id.home_recycle_announcement_pro_caption);
+            ;
+            announcement_pic = (ImageView) view.findViewById(R.id.home_recycle_announcement_pic);
+            ;
+            profile_pic = (ImageView) view.findViewById(R.id.home_recycle_announcement_pro_pic);
+            ;
 
         }
     }
@@ -145,7 +132,7 @@ public class HomeAnnouncements extends Fragment {
                 //StorageReference storageReference =;
                 holder.name.setText(model.getName());
                 holder.description.setText(model.getDescription());
-                Log.e("---------","xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+                Log.e("---------", "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
 
                 Picasso.get().load(model.getImagePath()).into(holder.announcement_pic);
@@ -158,12 +145,8 @@ public class HomeAnnouncements extends Fragment {
         };
 
         my_announcement_list.setHasFixedSize(true);
-       // home_announcements_list.setLayoutManager(new LinearLayoutManager(getActivity()));
+        // home_announcements_list.setLayoutManager(new LinearLayoutManager(getActivity()));
         my_announcement_list.setAdapter(adapter);
-
-
-
-
 
 
         ////////////////////

@@ -22,20 +22,19 @@ import java.util.List;
 
 public class UID {
 
-    public static String userID(){
-        String userid="";
+    public static String userID() {
+        String userid = "";
         FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        if (currentFirebaseUser!=null){
-            userid=currentFirebaseUser.getUid();
-        }
-        else   {
+        if (currentFirebaseUser != null) {
+            userid = currentFirebaseUser.getUid();
+        } else {
 
         }
         return userid;
     }
 
-    public static String convert_user_id_to_user_name(String user_id){
-        String user_name="";
+    public static String convert_user_id_to_user_name(String user_id) {
+        String user_name = "";
         final List<String> nameList = new ArrayList<>();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Log.e("xxxxxxxxxxxxx", db.toString());
@@ -46,17 +45,17 @@ public class UID {
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
                         nameList.clear();
 
-                        for (DocumentSnapshot snapshot : value){
+                        for (DocumentSnapshot snapshot : value) {
                             nameList.add(snapshot.getString("user_id"));
-                            Log.e("xxxxxxxxxxxxx",snapshot.getString("user_id") );
+                            Log.e("xxxxxxxxxxxxx", snapshot.getString("user_id"));
                         }
 
                     }
                 });
-            if(!nameList.isEmpty()){
-                user_name = nameList.get(0);
-            }
-            return user_name;
+        if (!nameList.isEmpty()) {
+            user_name = nameList.get(0);
+        }
+        return user_name;
     }
 
 

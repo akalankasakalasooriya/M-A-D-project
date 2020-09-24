@@ -38,7 +38,7 @@ public class UpdateDeleteAnnouncement extends AppCompatActivity {
 
         //getting id
         String documentID = "";
-        documentID=(String) getIntent().getSerializableExtra("docID");
+        documentID = (String) getIntent().getSerializableExtra("docID");
 
         //setting data
         DocumentReference docRef = db.collection("Announcement").document(documentID);
@@ -87,7 +87,6 @@ public class UpdateDeleteAnnouncement extends AppCompatActivity {
                         });
             }
         });
-
 
 
     }

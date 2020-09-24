@@ -22,11 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <!--        content                 -->
-        <Button
-            android:id="@+id/linktoProfileA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="service prifile tmp" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/home_recycle_announcement"

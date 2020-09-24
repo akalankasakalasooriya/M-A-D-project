@@ -49,7 +49,7 @@ public class ServicePage extends AppCompatActivity {
         ratingsAndReviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ratingsAndReviewsIntent = new Intent(ServicePage.this,RatingsAndReviews.class);
+                Intent ratingsAndReviewsIntent = new Intent(ServicePage.this, RatingsAndReviews.class);
                 startActivity(ratingsAndReviewsIntent);
 
             }
@@ -60,7 +60,7 @@ public class ServicePage extends AppCompatActivity {
         btnSeeFAQ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent seeFAQIntent = new Intent(ServicePage.this,SeeFAQ.class);
+                Intent seeFAQIntent = new Intent(ServicePage.this, SeeFAQ.class);
                 startActivity(seeFAQIntent);
 
             }
@@ -77,16 +77,16 @@ public class ServicePage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             int count = 0;
-                            float sum =(float) 0.0, average = (float) 0.0;
+                            float sum = (float) 0.0, average = (float) 0.0;
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 //Log.d("TAG", document.getId() + " => " + document.getData());
                                 //
                                 count++;
                                 sum += Float.parseFloat(document.getString("rating"));
-                                average = sum/(float)count;
+                                average = sum / (float) count;
                             }
-                            avgRating.setText("Ratings "+String.valueOf(average));
+                            avgRating.setText("Ratings " + String.valueOf(average));
                         } else {
                             Log.w("TAG", "Error getting documents.", task.getException());
                         }
@@ -96,12 +96,10 @@ public class ServicePage extends AppCompatActivity {
     }
 
 
-
-
     protected void makeCall() {
 
 
-        String d = "tel:" + "0772637357" ;
+        String d = "tel:" + "0772637357";
 
         Intent phoneIntent = new Intent(Intent.ACTION_CALL);
         phoneIntent.setData(Uri.parse(d));

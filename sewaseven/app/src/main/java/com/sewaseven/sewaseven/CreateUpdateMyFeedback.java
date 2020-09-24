@@ -44,12 +44,11 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
         myComment = findViewById(R.id.my_feedback_comment);
 
 
-
- //update
-        final FeedbackAndRatingsModel temp_feedbackAndRatings =new FeedbackAndRatingsModel();
+        //update
+        final FeedbackAndRatingsModel temp_feedbackAndRatings = new FeedbackAndRatingsModel();
         final String[] docID = new String[1];
-        docID[0]="";
-        firebaseFirestore.collection("Feedback").whereEqualTo("posted_user_id",UID.userID())
+        docID[0] = "";
+        firebaseFirestore.collection("Feedback").whereEqualTo("posted_user_id", UID.userID())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -60,11 +59,11 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                                 temp_feedbackAndRatings.setPosted_user_id(document.getString("posted_user_id"));
                                 temp_feedbackAndRatings.setComment(document.getString("comment"));
                                 temp_feedbackAndRatings.setRating(document.getString("rating"));
-                                docID[0] =document.getId();
+                                docID[0] = document.getId();
                                 //Log.e("----------data------", document.getString("posted_user_id"));
                                 //setting data if already submitted
                                 String currentUserID = UID.userID();
-                                if(currentUserID.equals(temp_feedbackAndRatings.getPosted_user_id())){
+                                if (currentUserID.equals(temp_feedbackAndRatings.getPosted_user_id())) {
                                     ratingBar.setRating(Float.parseFloat(temp_feedbackAndRatings.getRating()));
                                     myComment.setText(temp_feedbackAndRatings.getComment());
 
@@ -79,13 +78,12 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                 });
 
 
-
 //create
         //getting current user details
-        final User tempUser=new User();
+        final User tempUser = new User();
 
 
-        firebaseFirestore.collection("User").whereEqualTo("user_id",UID.userID())
+        firebaseFirestore.collection("User").whereEqualTo("user_id", UID.userID())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -114,10 +112,10 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                 feedbackAndRatingsModel.setRating(rating);
                 feedbackAndRatingsModel.setComment(comment);
                 feedbackAndRatingsModel.setPosted_user_id(posted_user_id);
-                feedbackAndRatingsModel.setPosted_user_name(tempUser.getFirstName()+" "+tempUser.getLastName());
+                feedbackAndRatingsModel.setPosted_user_name(tempUser.getFirstName() + " " + tempUser.getLastName());
 
 
-                if(docID[0] != "" ){
+                if (docID[0] != "") {
                     //update
                     Log.e("----TAG-----", docID[0]);
                     DocumentReference updateFeedback = firebaseFirestore.collection("Feedback").document(docID[0]);
@@ -131,7 +129,7 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                                     firebaseFirestore.collection("Feedback").document(docID[0])
                                             .update(
                                                     "rating", feedbackAndRatingsModel.getRating(),
-                                                    "comment",feedbackAndRatingsModel.getComment(),
+                                                    "comment", feedbackAndRatingsModel.getComment(),
                                                     "serverTimeStamp", FieldValue.serverTimestamp()
 
                                             );
@@ -146,21 +144,19 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                                     Log.w("TAG", "Error updating document", e);
                                 }
                             });
-                }
-                else
-                {
+                } else {
                     //new
-                newFeedbackRef.set(feedbackAndRatingsModel).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "added", Toast.LENGTH_SHORT).show();
-                            Intent reviewList = new Intent(CreateUpdateMyFeedback.this, RatingsAndReviews.class);
-                            startActivity(reviewList);
-                        } else {
+                    newFeedbackRef.set(feedbackAndRatingsModel).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(getApplicationContext(), "added", Toast.LENGTH_SHORT).show();
+                                Intent reviewList = new Intent(CreateUpdateMyFeedback.this, RatingsAndReviews.class);
+                                startActivity(reviewList);
+                            } else {
+                            }
                         }
-                    }
-                });
+                    });
                 }
 
             }

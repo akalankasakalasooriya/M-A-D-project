@@ -59,7 +59,6 @@
 
     <string name="created_sample_question">Question Question Question</string>
     <string name="FAQ_update_txt">Update</string>
-    <string name="FAQ_delete_txt">Delete</string>
     <string name="FAQ_ans_txt">Answer to the Question Answer to the Question Answer to the QuestionAnswer to the Question Answer to the Question</string>
     <string name="FAQ_heading_txt">FAQ</string>
     <!--    <string name="FAQ_add_new">add new faq</string>-->
@@ -169,18 +168,15 @@ For example, if a customer needs to repair his/her mobile phone they can find ou
 
     <string name="announcement_history_heading">Announcement History</string>
     <string name="announcement_history_total">Total Announcements</string>
+    <string name="faq_history_total">Total FAQ count</string>
     <string name="announcement_history_on_this_week">Announcements On This Week</string>
     <string name="announcement_history_update">Update</string>
     <string name="announcement_history_t1">Discount - 20% off.</string>
-    <string name="announcement_history_t2">Sorry! We are closed today.</string>
-    <string name="announcement_history_t3">Get a free mobile service today</string>
     <string name="announcement_history_data">xxx</string>
 
 
     <string name="edit_announcement_heading">Delete Announcement</string>
     <string name="edit_announcement_description">Description</string>
-    <string name="edit_announcement_select_image">Select Image</string>
-    <string name="edit_announcement_update">update</string>
     <string name="edit_announcement_delete">delete</string>
 
 

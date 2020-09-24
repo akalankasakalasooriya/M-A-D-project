@@ -38,14 +38,14 @@ public class SeeFAQ extends AppCompatActivity {
 
         //options
         FirestoreRecyclerOptions<FAQModel> options = new FirestoreRecyclerOptions.Builder<FAQModel>()
-                .setQuery(query,FAQModel.class)
+                .setQuery(query, FAQModel.class)
                 .build();
 
         adapter = new FirestoreRecyclerAdapter<FAQModel, FAQ_view_holder>(options) {
             @NonNull
             @Override
             public FAQ_view_holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_faq_single,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_faq_single, parent, false);
 
                 return new FAQ_view_holder(view);
             }
@@ -66,7 +66,7 @@ public class SeeFAQ extends AppCompatActivity {
 
     }
 
-    private class FAQ_view_holder extends RecyclerView.ViewHolder{
+    private class FAQ_view_holder extends RecyclerView.ViewHolder {
         private TextView list_question;
         private TextView list_answer;
 

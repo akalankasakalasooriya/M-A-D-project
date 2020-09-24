@@ -29,12 +29,12 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 //        tabs
-        homeTabs= findViewById(R.id.home_tabs);
+        homeTabs = findViewById(R.id.home_tabs);
         announcements = findViewById(R.id.home_announcements);
         services = findViewById(R.id.home_services);
         homeViewPager = findViewById(R.id.home_view_pager);
 
-        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(),homeTabs.getTabCount());
+        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), homeTabs.getTabCount());
         homeViewPager.setAdapter(pagerAdapter);
 
 
@@ -55,7 +55,6 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        
 
         goToMenue = findViewById(R.id.profile);
         goToMenue.setOnClickListener(new View.OnClickListener() {

@@ -42,7 +42,7 @@ import java.util.Map;
 public class NewAnnouncement extends AppCompatActivity {
 
     private EditText description;
-    private Button select_pic , publish;
+    private Button select_pic, publish;
     private ImageView selectedImg;
     public Uri imguri;
     private StorageReference mStorageRef;
@@ -54,7 +54,7 @@ public class NewAnnouncement extends AppCompatActivity {
         setContentView(R.layout.activity_new_announcement);
         select_pic = findViewById(R.id.btn_select_ans_img);
         publish = findViewById(R.id.btn_publish_ans);
-        selectedImg= findViewById(R.id.img_show_selected_btn);
+        selectedImg = findViewById(R.id.img_show_selected_btn);
         description = findViewById(R.id.descriptionTxt);
         mStorageRef = FirebaseStorage.getInstance().getReference("Images");
 
@@ -79,29 +79,26 @@ public class NewAnnouncement extends AppCompatActivity {
 
                 String txtdescription = String.valueOf(description.getText());
 
-                if(txtdescription.equals("") || txtdescription.equals(null) || imguri == null)
-                {
+                if (txtdescription.equals("") || txtdescription.equals(null) || imguri == null) {
                     Toast.makeText(getApplicationContext(), "please fill description", Toast.LENGTH_SHORT).show();
-                }
-                else{
+                } else {
 
                     publishNewAnnouncement();
 
                 }
 
 
-
             }
         });
     }
 
-    private void  publishNewAnnouncement() {
+    private void publishNewAnnouncement() {
         final String[] imgURL = {""};
-        imgURL[0]="";
-        final StorageReference Ref = mStorageRef.child(System.currentTimeMillis()+"."+getExtension(imguri));
+        imgURL[0] = "";
+        final StorageReference Ref = mStorageRef.child(System.currentTimeMillis() + "." + getExtension(imguri));
 
 
-       UploadTask uploadTask = Ref.putFile(imguri);
+        UploadTask uploadTask = Ref.putFile(imguri);
 
         Task<Uri> urlTask = uploadTask.continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
             @Override
@@ -121,7 +118,7 @@ public class NewAnnouncement extends AppCompatActivity {
                     imgURL[0] = String.valueOf(downloadUri);
 
                     //getting current user details
-                    final User tempUser=new User();
+                    final User tempUser = new User();
 
                     final FirebaseFirestore db = FirebaseFirestore.getInstance();
                     db.collection("User").whereEqualTo("user_id", UID.userID())
@@ -136,13 +133,12 @@ public class NewAnnouncement extends AppCompatActivity {
                                             tempUser.setLastName(document.getString("l_name"));
 
 
-
                                             String txtdescription_value = String.valueOf(description.getText());
                                             Map<String, Object> announcement = new HashMap<>();
                                             announcement.put("description", txtdescription_value);
-                                            announcement.put("imagePath",imgURL[0]);
-                                            announcement.put("serverTimeStamp",System.currentTimeMillis());
-                                            announcement.put("name", tempUser.getFirstName()+" "+tempUser.getLastName());
+                                            announcement.put("imagePath", imgURL[0]);
+                                            announcement.put("serverTimeStamp", System.currentTimeMillis());
+                                            announcement.put("name", tempUser.getFirstName() + " " + tempUser.getLastName());
                                             announcement.put("proPicPath", "https://firebasestorage.googleapis.com/v0/b/sewa-seven.appspot.com/o/propic.jpg?alt=media&token=fde461a5-f26c-40bf-b318-b9a8e4cedb19");
 
 // Add a new document with a generated ID
@@ -174,10 +170,6 @@ public class NewAnnouncement extends AppCompatActivity {
                             });
 
 
-
-
-
-
                     ///////////
                     Toast.makeText(getApplicationContext(), "done", Toast.LENGTH_SHORT).show();
 
@@ -191,10 +183,11 @@ public class NewAnnouncement extends AppCompatActivity {
 
 
     }
-    private String getExtension(Uri uri){
+
+    private String getExtension(Uri uri) {
         ContentResolver cr = getContentResolver();
         MimeTypeMap mimeTypeMap = MimeTypeMap.getSingleton();
-        return  mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
+        return mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
     }
 
 
@@ -202,15 +195,14 @@ public class NewAnnouncement extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityForResult(intent,1);
+        startActivityForResult(intent, 1);
 
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==1 && resultCode==RESULT_OK &&  data != null && data.getData()!= null)
-        {
+        if (requestCode == 1 && resultCode == RESULT_OK && data != null && data.getData() != null) {
             imguri = data.getData();
 
             selectedImg.setImageURI(imguri);

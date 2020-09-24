@@ -19,7 +19,7 @@ import com.google.firebase.firestore.Query;
 import com.sewaseven.database.FeedbackAndRatingsModel;
 
 public class FeedbackAndRatings extends AppCompatActivity {
-    private  RecyclerView recyclerViewFeedBack;
+    private RecyclerView recyclerViewFeedBack;
     private FirebaseFirestore firebaseFirestore;
     private FirestoreRecyclerAdapter firestoreRecyclerAdapter;
 
@@ -36,16 +36,16 @@ public class FeedbackAndRatings extends AppCompatActivity {
         Query query = firebaseFirestore.collection("Feedback");
         //recycle
         FirestoreRecyclerOptions<FeedbackAndRatingsModel> options = new FirestoreRecyclerOptions.Builder<FeedbackAndRatingsModel>()
-                .setQuery(query,FeedbackAndRatingsModel.class)
+                .setQuery(query, FeedbackAndRatingsModel.class)
                 .build();
 
 
-        firestoreRecyclerAdapter = new FirestoreRecyclerAdapter<FeedbackAndRatingsModel,FeedbackAndRating_viewHolder>(options) {
+        firestoreRecyclerAdapter = new FirestoreRecyclerAdapter<FeedbackAndRatingsModel, FeedbackAndRating_viewHolder>(options) {
 
             @NonNull
             @Override
             public FeedbackAndRating_viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_feedbacklist_ratings_feedback,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_feedbacklist_ratings_feedback, parent, false);
                 return new FeedbackAndRating_viewHolder(view);
             }
 
@@ -65,10 +65,10 @@ public class FeedbackAndRatings extends AppCompatActivity {
 
     }
 
-    private class FeedbackAndRating_viewHolder extends RecyclerView.ViewHolder{
+    private class FeedbackAndRating_viewHolder extends RecyclerView.ViewHolder {
         private TextView name;
-        private  TextView rating;
-        private  TextView comment;
+        private TextView rating;
+        private TextView comment;
 
         public FeedbackAndRating_viewHolder(@NonNull View itemView) {
             super(itemView);

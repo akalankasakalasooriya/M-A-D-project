@@ -11,7 +11,7 @@ import com.sewaseven.sewaseven.HomeServices;
 public class PagerAdapter extends FragmentPagerAdapter {
     private int numOfTabs;
 
-    public PagerAdapter (FragmentManager fm, int numOfTabs){
+    public PagerAdapter(FragmentManager fm, int numOfTabs) {
         super(fm);
         this.numOfTabs = numOfTabs;
     }
@@ -19,11 +19,11 @@ public class PagerAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        switch (position){
+        switch (position) {
             case 0:
                 return new HomeAnnouncements();
             case 1:
-                return  new HomeServices();
+                return new HomeServices();
             default:
                 return null;
         }

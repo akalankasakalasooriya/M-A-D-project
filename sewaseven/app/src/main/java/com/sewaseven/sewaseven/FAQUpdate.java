@@ -24,8 +24,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 public class FAQUpdate extends AppCompatActivity {
-   private TextView update_q , update_a;
-   private ImageButton done,delete;
+    private TextView update_q, update_a;
+    private ImageButton done, delete;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
@@ -40,7 +40,7 @@ public class FAQUpdate extends AppCompatActivity {
 
 //getting  and setting data
         String documentID = "";
-        documentID=(String) getIntent().getSerializableExtra("docID");
+        documentID = (String) getIntent().getSerializableExtra("docID");
         //Log.e("xxxxxxxxx","xx   -- "+documentID);
 
         DocumentReference docRef = db.collection("FAQ").document(documentID);
@@ -56,7 +56,7 @@ public class FAQUpdate extends AppCompatActivity {
                         update_q.setText(String.valueOf(document.get("question")));
                     } else {
                         Log.d("TAG", "No such document");
-                }
+                    }
                 } else {
                     Log.d("TAG", "get failed with ", task.getException());
                 }
@@ -75,8 +75,8 @@ public class FAQUpdate extends AppCompatActivity {
 
                 updateFAQ
                         .update(
-                                "question",String.valueOf(update_q.getText()),
-                                "answer",String.valueOf(update_a.getText())
+                                "question", String.valueOf(update_q.getText()),
+                                "answer", String.valueOf(update_a.getText())
 //                                                "serverTimeStamp", FieldValue.serverTimestamp()
 
                         )
@@ -89,8 +89,6 @@ public class FAQUpdate extends AppCompatActivity {
                                 startActivity(faqlist);
                             }
                         });
-
-
 
 
             }

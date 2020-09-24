@@ -2,7 +2,14 @@ package com.sewaseven.database;
 
 import android.location.Location;
 
-public class Service {
+import com.google.firebase.firestore.IgnoreExtraProperties;
+
+import java.io.Serializable;
+
+@IgnoreExtraProperties
+
+public class Service implements Serializable {
+    private String DocID;
     private String name;
     private String profile_pic_path;
     private String[] followers_id;
@@ -11,6 +18,17 @@ public class Service {
     private String tp_number;
     private String description;
     private String owned_user_id;
+
+    public Service() {
+        this.name = "";
+        this.profile_pic_path = "";
+        //this.followers_id = "";
+        this.location = "";
+        this.email = "";
+        this.tp_number = "";
+        this.description = "";
+        this.owned_user_id = "";
+    }
 
     public Service(String name, String profile_pic_path, String[] followers_id, String location, String email, String tp_number, String description, String owned_user_id) {
         this.name = name;
@@ -53,5 +71,13 @@ public class Service {
 
     public String getOwned_user_id() {
         return owned_user_id;
+    }
+
+    public String getDocID() {
+        return DocID;
+    }
+
+    public void setDocID(String docID) {
+        DocID = docID;
     }
 }

@@ -22,19 +22,19 @@ import java.util.Map;
 
 public class AddNewFaq extends AppCompatActivity {
     private EditText question;
-    private  EditText answer;
+    private EditText answer;
     private Button btn_add;
-    private  FirebaseFirestore db;
+    private FirebaseFirestore db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_faq);
 
-        btn_add= findViewById(R.id.newFAQ_save_btn);
+        btn_add = findViewById(R.id.newFAQ_save_btn);
         question = findViewById(R.id.newFAQ_question);
         answer = findViewById(R.id.newFAQ_answer);
-         db = FirebaseFirestore.getInstance();
+        db = FirebaseFirestore.getInstance();
 
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +45,7 @@ public class AddNewFaq extends AppCompatActivity {
 
                 Map<String, Object> FAQ = new HashMap<>();
                 FAQ.put("answer", txtanswer);
-                FAQ.put("question",txtquestion);
+                FAQ.put("question", txtquestion);
 
 // Add a new document with a generated ID
                 db.collection("FAQ")

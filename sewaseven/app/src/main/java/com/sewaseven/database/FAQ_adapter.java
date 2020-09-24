@@ -30,7 +30,7 @@ public class FAQ_adapter extends RecyclerView.Adapter<FAQ_adapter.FAQ_view_holde
     public FAQ_view_holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         return new FAQ_view_holder(
-                LayoutInflater.from(mCtx).inflate(R.layout.recyle_asked_questions_single,parent,false)
+                LayoutInflater.from(mCtx).inflate(R.layout.recyle_asked_questions_single, parent, false)
         );
     }
 
@@ -47,11 +47,12 @@ public class FAQ_adapter extends RecyclerView.Adapter<FAQ_adapter.FAQ_view_holde
         return FAQ_list.size();
     }
 
-     class FAQ_view_holder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView question , answer;
+    class FAQ_view_holder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        TextView question, answer;
+
         public FAQ_view_holder(@NonNull View itemView) {
             super(itemView);
-            question =itemView.findViewById(R.id.asked_questions_single_question);
+            question = itemView.findViewById(R.id.asked_questions_single_question);
             answer = itemView.findViewById(R.id.asked_questions_single_answer);
             itemView.setOnClickListener(this);
 
@@ -59,7 +60,7 @@ public class FAQ_adapter extends RecyclerView.Adapter<FAQ_adapter.FAQ_view_holde
 
         @Override
         public void onClick(View v) {
-            FAQModel faqModel= FAQ_list.get(getAdapterPosition());
+            FAQModel faqModel = FAQ_list.get(getAdapterPosition());
             Intent intent = new Intent(mCtx, FAQUpdate.class);
             intent.putExtra("docID", faqModel.getDocID());
             mCtx.startActivity(intent);

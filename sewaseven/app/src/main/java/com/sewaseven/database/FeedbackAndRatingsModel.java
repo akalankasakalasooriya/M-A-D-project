@@ -11,7 +11,8 @@ public class FeedbackAndRatingsModel {
     private String posted_user_id;
     private String rating;
     private String comment;
-    private @ServerTimestamp Date serverTimeStamp;
+    private @ServerTimestamp
+    Date serverTimeStamp;
 
 
     public FeedbackAndRatingsModel() {
@@ -19,11 +20,11 @@ public class FeedbackAndRatingsModel {
         this.rating = "";
         this.comment = "";
         serverTimeStamp = null;
-        this.posted_user_name= "";
+        this.posted_user_name = "";
     }
 
 
-    public FeedbackAndRatingsModel(String posted_user_id, String rating, String comment , String posted_user_name) {
+    public FeedbackAndRatingsModel(String posted_user_id, String rating, String comment, String posted_user_name) {
         this.posted_user_id = posted_user_id;
         this.rating = rating;
         this.comment = comment;

@@ -41,7 +41,7 @@ public class RatingsAndReviews extends AppCompatActivity {
         btnCreateUpdateFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent createUpdateFeedbackIntent = new Intent(RatingsAndReviews.this,CreateUpdateMyFeedback.class);
+                Intent createUpdateFeedbackIntent = new Intent(RatingsAndReviews.this, CreateUpdateMyFeedback.class);
                 startActivity(createUpdateFeedbackIntent);
             }
         });
@@ -52,7 +52,7 @@ public class RatingsAndReviews extends AppCompatActivity {
         Query query = firebaseFirestore.collection("Feedback");
         //recycle
         FirestoreRecyclerOptions<FeedbackAndRatingsModel> options = new FirestoreRecyclerOptions.Builder<FeedbackAndRatingsModel>()
-                .setQuery(query,FeedbackAndRatingsModel.class)
+                .setQuery(query, FeedbackAndRatingsModel.class)
                 .build();
 
 
@@ -61,7 +61,7 @@ public class RatingsAndReviews extends AppCompatActivity {
             @NonNull
             @Override
             public RatingsAndReviews.service_feedbackAndRating_viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_feedbacklist_ratings_feedback,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_feedbacklist_ratings_feedback, parent, false);
                 Log.e("info", "------------------onCreateViewHolder------------------------------------");
                 return new RatingsAndReviews.service_feedbackAndRating_viewHolder(view);
             }
@@ -83,10 +83,10 @@ public class RatingsAndReviews extends AppCompatActivity {
     }
 
 
-    private class service_feedbackAndRating_viewHolder extends RecyclerView.ViewHolder{
+    private class service_feedbackAndRating_viewHolder extends RecyclerView.ViewHolder {
         private TextView name;
-        private  TextView rating;
-        private  TextView comment;
+        private TextView rating;
+        private TextView comment;
 
         public service_feedbackAndRating_viewHolder(@NonNull View itemView) {
             super(itemView);

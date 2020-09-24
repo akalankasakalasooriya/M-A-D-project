@@ -38,12 +38,10 @@ public class PreviousAnnouncement extends AppCompatActivity {
     private Announcement_adapter adapter;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_previous_announcement);
-
 
 
         fire_store_list_announsement = (RecyclerView) findViewById(R.id.announcements_history_list);
@@ -51,7 +49,7 @@ public class PreviousAnnouncement extends AppCompatActivity {
         fire_store_list_announsement.setLayoutManager(new LinearLayoutManager(this));
 
         announsement_list = new ArrayList<>();
-        adapter = new Announcement_adapter(this,announsement_list);
+        adapter = new Announcement_adapter(this, announsement_list);
 
         fire_store_list_announsement.setAdapter(adapter);
 
@@ -59,10 +57,10 @@ public class PreviousAnnouncement extends AppCompatActivity {
         firebaseFirestore.collection("Announcement").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                if(!queryDocumentSnapshots.isEmpty()){
-                    List<DocumentSnapshot> list =queryDocumentSnapshots.getDocuments();
-                    for (DocumentSnapshot d : list){
-                        Announsement model =  d.toObject(Announsement.class);
+                if (!queryDocumentSnapshots.isEmpty()) {
+                    List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                    for (DocumentSnapshot d : list) {
+                        Announsement model = d.toObject(Announsement.class);
                         model.setDocID(d.getId());
                         announsement_list.add(model);
                     }
@@ -76,8 +74,6 @@ public class PreviousAnnouncement extends AppCompatActivity {
 
         getTotalAnnouncement();
         getTotalAnnouncement_week();
-
-
 
 
     }
@@ -94,7 +90,7 @@ public class PreviousAnnouncement extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        int countTotal=0;
+                        int countTotal = 0;
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d("TAG", document.getId() + " => " + document.getData());
@@ -118,7 +114,7 @@ public class PreviousAnnouncement extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        int countTotal=0;
+                        int countTotal = 0;
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d("TAG", document.getId() + " => " + document.getData());

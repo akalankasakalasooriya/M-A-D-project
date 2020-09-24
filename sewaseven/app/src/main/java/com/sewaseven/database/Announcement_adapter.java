@@ -32,7 +32,7 @@ public class Announcement_adapter extends RecyclerView.Adapter<Announcement_adap
     public Announcement_view_holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         return new Announcement_view_holder(
-                LayoutInflater.from(mCtx).inflate(R.layout.recycle_announcements_history_single,parent,false)
+                LayoutInflater.from(mCtx).inflate(R.layout.recycle_announcements_history_single, parent, false)
         );
     }
 
@@ -50,11 +50,12 @@ public class Announcement_adapter extends RecyclerView.Adapter<Announcement_adap
     }
 
     class Announcement_view_holder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView details ;
+        TextView details;
         ImageView image;
+
         public Announcement_view_holder(@NonNull View itemView) {
             super(itemView);
-            details =itemView.findViewById(R.id.announcements_history_single_description);
+            details = itemView.findViewById(R.id.announcements_history_single_description);
             image = itemView.findViewById(R.id.announcements_history_single_img);
             itemView.setOnClickListener(this);
 
@@ -62,7 +63,7 @@ public class Announcement_adapter extends RecyclerView.Adapter<Announcement_adap
 
         @Override
         public void onClick(View v) {
-            Announsement ansmnt= Announsement_list.get(getAdapterPosition());
+            Announsement ansmnt = Announsement_list.get(getAdapterPosition());
             Intent intent = new Intent(mCtx, UpdateDeleteAnnouncement.class);
             intent.putExtra("docID", ansmnt.getDocID());
             mCtx.startActivity(intent);

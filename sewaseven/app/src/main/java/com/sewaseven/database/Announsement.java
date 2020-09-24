@@ -1,12 +1,12 @@
 package com.sewaseven.database;
 
 
-
 import com.google.firebase.firestore.IgnoreExtraProperties;
 import com.google.firebase.firestore.ServerTimestamp;
 
 import java.io.Serializable;
 import java.util.Date;
+
 @IgnoreExtraProperties
 public class Announsement implements Serializable {
     private String DocID;
@@ -15,7 +15,7 @@ public class Announsement implements Serializable {
     private String imagePath;
     private String proPicPath;
     private Long serverTimeStamp;
-    private  String publishedby;
+    private String publishedby;
 
     public Announsement(String name, String description, String imagePath, String proPicPath, Long serverTimeStamp, String publishedby) {
         this.name = name;

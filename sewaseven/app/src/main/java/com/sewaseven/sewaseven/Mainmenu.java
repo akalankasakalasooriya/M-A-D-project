@@ -60,7 +60,7 @@ public class Mainmenu extends AppCompatActivity {
         });
 
 
-        dashBoardbtn= findViewById(R.id.btnMenueDashboard);
+        dashBoardbtn = findViewById(R.id.btnMenueDashboard);
         dashBoardbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +72,7 @@ public class Mainmenu extends AppCompatActivity {
         });
 
 
-        aboutAppbtn= findViewById(R.id.aboutApp);
+        aboutAppbtn = findViewById(R.id.aboutApp);
         aboutAppbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,7 +82,6 @@ public class Mainmenu extends AppCompatActivity {
 
             }
         });
-
 
 
     }
