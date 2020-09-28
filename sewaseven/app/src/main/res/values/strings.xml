@@ -50,12 +50,11 @@
     <string name="service_page_data">XXX</string>
 
 
-
-
     <!--    /AKALANKA-->
 
 
-    <!--    ANJANA--><string name="home_name">Name Name</string>
+    <!--    ANJANA-->
+    <string name="home_name">Name Name</string>
 
     <string name="created_sample_question">Question Question Question</string>
     <string name="FAQ_update_txt">Update</string>
@@ -77,6 +76,7 @@
     <string name="new_faq_heading">Add New FAQ</string>
 
     <string name="about_heading">About</string>
+    <string name="search_heading">Search Result</string>
     <string name="about_txt">“Sewaseven” is a mobile application developed for service providers to provide their work through an online platform. Service providers and the customers can log in to this application using their own login credentials. Service providers can publish their services, announcements, and provide service details at the FAQ session whereas, the customers can get services, give ratings, and provide feedback to the service providers.
 
 This is a user-friendly application that can be used anywhere at any time using a mobile phone. This would be beneficial for the customers to find out their service providers easily and quickly.

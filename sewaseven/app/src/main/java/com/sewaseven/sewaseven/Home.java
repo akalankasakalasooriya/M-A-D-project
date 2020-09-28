@@ -18,6 +18,7 @@ import com.sewaseven.additional.UID;
 public class Home extends AppCompatActivity {
     private LinearLayout btnServiceProfile;
     private ImageButton goToMenue;
+    private ImageButton goTosearch;
     private TabLayout homeTabs;
     private TabItem announcements;
     private TabItem services;
@@ -63,6 +64,17 @@ public class Home extends AppCompatActivity {
 
                 Intent gotoMainMenue = new Intent(Home.this, Mainmenu.class);
                 startActivity(gotoMainMenue);
+
+            }
+        });
+
+        goTosearch = findViewById(R.id.search);
+        goTosearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent gotoSearchResult = new Intent(Home.this, SearchResults.class);
+                startActivity(gotoSearchResult);
 
             }
         });

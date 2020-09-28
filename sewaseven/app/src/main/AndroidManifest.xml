@@ -3,8 +3,8 @@
     package="com.sewaseven.sewaseven">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +13,13 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".About"></activity>
+        <activity android:name=".SearchResults"></activity>
+        <activity android:name=".About" />
         <activity android:name=".AddNewFaq" />
         <activity android:name=".SeeFAQ" />
-        <activity android:name=".FAQUpdate" android:parentActivityName=".AskedQuestions"></activity>
+        <activity
+            android:name=".FAQUpdate"
+            android:parentActivityName=".AskedQuestions" />
         <activity android:name=".CreateUpdateMyFeedback" />
         <activity android:name=".RatingsAndReviews" />
         <activity android:name=".ServicePage" />
