@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.sewaseven.additional.UID;
+import com.sewaseven.additional.definedFunctions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -71,7 +71,7 @@ public class Signup extends AppCompatActivity {
                                 String userID="";
                                 String name_f = "";String name_l = "";
                                 name_f = String.valueOf(nameTxt_f.getText()); name_l = String.valueOf(nameTxt_l.getText());
-                                userID = UID.userID();
+                                userID = definedFunctions.userID();
                                 ///////////////////////
                                 // Create a new user with a first and last name
                                 Map<String, Object> user = new HashMap<>();
