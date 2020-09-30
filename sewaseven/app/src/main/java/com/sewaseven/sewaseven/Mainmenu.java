@@ -65,7 +65,7 @@ public class Mainmenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent dashboardIntent = new Intent(Mainmenu.this, Dashboard.class);
+                Intent dashboardIntent = new Intent(Mainmenu.this, ServiceList.class);
                 startActivity(dashboardIntent);
 
             }
