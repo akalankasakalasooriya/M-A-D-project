@@ -29,6 +29,9 @@ public class ServicePage extends AppCompatActivity {
     private ImageButton ratingsAndReviews;
     private ImageButton btnSeeFAQ;
     private TextView avgRating;
+    private TextView servicename; //kanchila
+    private TextView locationobj; //Kanchila
+    private TextView phoneobj; //Kanchila
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +52,7 @@ public class ServicePage extends AppCompatActivity {
         ratingsAndReviews.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent ratingsAndReviewsIntent = new Intent(ServicePage.this, RatingsAndReviews.class);
+                Intent ratingsAndReviewsIntent = new Intent(ServicePage.this,RatingsAndReviews.class);
                 startActivity(ratingsAndReviewsIntent);
 
             }
@@ -60,7 +63,7 @@ public class ServicePage extends AppCompatActivity {
         btnSeeFAQ.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent seeFAQIntent = new Intent(ServicePage.this, SeeFAQ.class);
+                Intent seeFAQIntent = new Intent(ServicePage.this,SeeFAQ.class);
                 startActivity(seeFAQIntent);
 
             }
@@ -77,18 +80,84 @@ public class ServicePage extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             int count = 0;
-                            float sum = (float) 0.0, average = (float) 0.0;
+                            float sum =(float) 0.0, average = (float) 0.0;
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 //Log.d("TAG", document.getId() + " => " + document.getData());
                                 //
                                 count++;
                                 sum += Float.parseFloat(document.getString("rating"));
-                                average = sum / (float) count;
+                                average = sum/(float)count;
                             }
-                            avgRating.setText("Ratings " + String.valueOf(average));
+                            avgRating.setText("Ratings "+String.valueOf(average));
                         } else {
                             Log.w("TAG", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+        //get service name
+
+        servicename = findViewById(R.id.service_page_service_name);
+
+        db.collection("Service")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            String name = null;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d("", document.getId() + " => " + document.getData());
+                                name = document.getString("name");
+                            }
+                            servicename.setText(name);
+                        } else {
+                            Log.w("", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+        //get location
+
+        locationobj = findViewById(R.id.service_page_location);
+
+        db.collection("Service")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            String location = null;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d("", document.getId() + " => " + document.getData());
+                                location = document.getString("location");
+                            }
+                            locationobj.setText(location);
+                        } else {
+                            Log.w("", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+        //get phone number
+
+        phoneobj = findViewById(R.id.service_page_phone_number);
+
+        db.collection("Service")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            String phone = null;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d("", document.getId() + " => " + document.getData());
+                                phone = document.getString("tp_number");
+                            }
+                            phoneobj.setText(phone);
+                        } else {
+                            Log.w("", "Error getting documents.", task.getException());
                         }
                     }
                 });
@@ -96,10 +165,12 @@ public class ServicePage extends AppCompatActivity {
     }
 
 
+
+
     protected void makeCall() {
 
 
-        String d = "tel:" + "0772637357";
+        String d = "tel:" + "0772637357" ;
 
         Intent phoneIntent = new Intent(Intent.ACTION_CALL);
         phoneIntent.setData(Uri.parse(d));

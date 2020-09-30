@@ -28,6 +28,10 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
     private ImageButton btnDeleteService;
     private ImageButton btnUpdateServiceDetails;
     private TextView avgServiceRating;
+    private TextView servicename; //kanchila
+    private TextView locationobj; //Kanchila
+    private TextView phoneobj; //Kanchila
+    private TextView descriptionobj; //Kanchila
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +44,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnAskedQuestions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent dashboardQuestionsIntent = new Intent(Dashboard.this, AskedQuestions.class);
+                Intent dashboardQuestionsIntent = new Intent(Dashboard.this,AskedQuestions.class);
                 startActivity(dashboardQuestionsIntent);
             }
         });
@@ -50,7 +54,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         previousAnnouncements.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent PreviousAnnouncementsIntent = new Intent(Dashboard.this, PreviousAnnouncement.class);
+                Intent PreviousAnnouncementsIntent = new Intent(Dashboard.this,PreviousAnnouncement.class);
                 startActivity(PreviousAnnouncementsIntent);
             }
         });
@@ -60,7 +64,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnAddNewAnnouncement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addNewAnnouncementIntent = new Intent(Dashboard.this, NewAnnouncement.class);
+                Intent addNewAnnouncementIntent = new Intent(Dashboard.this,NewAnnouncement.class);
                 startActivity(addNewAnnouncementIntent);
             }
         });
@@ -70,7 +74,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnDeleteService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent deleteServiceIntent = new Intent(Dashboard.this, DeleteService.class);
+                Intent deleteServiceIntent = new Intent(Dashboard.this,DeleteService.class);
                 startActivity(deleteServiceIntent);
             }
         });
@@ -80,17 +84,18 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnUpdateServiceDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent updateServiceDetailsIntent = new Intent(Dashboard.this, UpdateServiceDetails.class);
+                Intent updateServiceDetailsIntent = new Intent(Dashboard.this,UpdateServiceDetails.class);
                 startActivity(updateServiceDetailsIntent);
             }
         });
+
 
 
         btnFeedbackAndRatings = findViewById(R.id.feedbackAndRatings);
         btnFeedbackAndRatings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent updateServiceDetailsIntent = new Intent(Dashboard.this, FeedbackAndRatings.class);
+                Intent updateServiceDetailsIntent = new Intent(Dashboard.this,FeedbackAndRatings.class);
                 startActivity(updateServiceDetailsIntent);
             }
         });
@@ -112,18 +117,105 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             int count = 0;
-                            float sum = (float) 0.0, average = (float) 0.0;
+                            float sum =(float) 0.0, average = (float) 0.0;
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 //Log.d("TAG", document.getId() + " => " + document.getData());
                                 //avgServiceRating
                                 count++;
                                 sum += Float.parseFloat(document.getString("rating"));
-                                average = sum / (float) count;
+                                average = sum/(float)count;
                             }
                             avgServiceRating.setText(String.valueOf(average));
                         } else {
                             Log.w("TAG", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+        //get service name
+
+        servicename = findViewById(R.id.dashboard_service_name);
+
+        db.collection("Service")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            String name = null;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d("", document.getId() + " => " + document.getData());
+                                name = document.getString("name");
+                            }
+                            servicename.setText(name);
+                        } else {
+                            Log.w("", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+        //get location
+        locationobj = findViewById(R.id.dashboard_location);
+
+        db.collection("Service")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            String location = null;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d("", document.getId() + " => " + document.getData());
+                                location = document.getString("location");
+                            }
+                            locationobj.setText(location);
+                        } else {
+                            Log.w("", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+        //get phone number
+
+        phoneobj = findViewById(R.id.dashboard_phone_number);
+
+        db.collection("Service")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            String phone = null;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d("", document.getId() + " => " + document.getData());
+                                phone = document.getString("tp_number");
+                            }
+                            phoneobj.setText(phone);
+                        } else {
+                            Log.w("", "Error getting documents.", task.getException());
+                        }
+                    }
+                });
+
+        //get description
+
+        descriptionobj = findViewById(R.id.dashboard_description);
+
+        db.collection("Service")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            String description = null;
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                // Log.d("", document.getId() + " => " + document.getData());
+                                description = document.getString("description");
+                            }
+                            descriptionobj.setText(description);
+                        } else {
+                            Log.w("", "Error getting documents.", task.getException());
                         }
                     }
                 });

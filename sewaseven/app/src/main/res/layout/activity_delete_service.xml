@@ -102,20 +102,18 @@
                 android:textSize="18sp" />
 
 
-
-
             <TextView
                 android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"
-                android:text="@string/delete_service_enter_password"
+                android:text="Company Name"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/delete_Company_Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -125,7 +123,7 @@
                 android:text="" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/Delete_Service_Button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="100dp"
