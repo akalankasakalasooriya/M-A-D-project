@@ -21,7 +21,7 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.sewaseven.additional.UID;
+import com.sewaseven.additional.definedFunctions;
 import com.sewaseven.database.FeedbackAndRatingsModel;
 import com.sewaseven.database.User;
 
@@ -48,7 +48,7 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
         final FeedbackAndRatingsModel temp_feedbackAndRatings = new FeedbackAndRatingsModel();
         final String[] docID = new String[1];
         docID[0] = "";
-        firebaseFirestore.collection("Feedback").whereEqualTo("posted_user_id", UID.userID())
+        firebaseFirestore.collection("Feedback").whereEqualTo("posted_user_id", definedFunctions.userID())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -62,7 +62,7 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                                 docID[0] = document.getId();
                                 //Log.e("----------data------", document.getString("posted_user_id"));
                                 //setting data if already submitted
-                                String currentUserID = UID.userID();
+                                String currentUserID = definedFunctions.userID();
                                 if (currentUserID.equals(temp_feedbackAndRatings.getPosted_user_id())) {
                                     ratingBar.setRating(Float.parseFloat(temp_feedbackAndRatings.getRating()));
                                     myComment.setText(temp_feedbackAndRatings.getComment());
@@ -83,7 +83,7 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
         final User tempUser = new User();
 
 
-        firebaseFirestore.collection("User").whereEqualTo("user_id", UID.userID())
+        firebaseFirestore.collection("User").whereEqualTo("user_id", definedFunctions.userID())
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -107,7 +107,7 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
             public void onClick(View view) {
                 String rating = Float.toString(ratingBar.getRating());
                 String comment = String.valueOf(myComment.getText());
-                String posted_user_id = UID.userID();
+                String posted_user_id = definedFunctions.userID();
                 final FeedbackAndRatingsModel feedbackAndRatingsModel = new FeedbackAndRatingsModel();
                 feedbackAndRatingsModel.setRating(rating);
                 feedbackAndRatingsModel.setComment(comment);

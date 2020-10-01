@@ -20,7 +20,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UID {
+public class definedFunctions {
 
     public static String userID() {
         String userid = "";
@@ -33,29 +33,13 @@ public class UID {
         return userid;
     }
 
-    public static String convert_user_id_to_user_name(String user_id) {
-        String user_name = "";
-        final List<String> nameList = new ArrayList<>();
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        Log.e("xxxxxxxxxxxxx", db.toString());
-
-        db.collection("user")
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                        nameList.clear();
-
-                        for (DocumentSnapshot snapshot : value) {
-                            nameList.add(snapshot.getString("user_id"));
-                            Log.e("xxxxxxxxxxxxx", snapshot.getString("user_id"));
-                        }
-
-                    }
-                });
-        if (!nameList.isEmpty()) {
-            user_name = nameList.get(0);
+    public static float calAVG(float sum, int count) {
+        float avg = 0;
+        if (count!=0)
+        {
+            avg = sum/(float)count;
         }
-        return user_name;
+        return avg;
     }
 
 

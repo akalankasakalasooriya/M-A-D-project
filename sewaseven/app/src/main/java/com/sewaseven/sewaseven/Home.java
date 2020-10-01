@@ -5,15 +5,13 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
-import com.sewaseven.additional.UID;
 
 public class Home extends AppCompatActivity {
     private LinearLayout btnServiceProfile;
@@ -23,6 +21,7 @@ public class Home extends AppCompatActivity {
     private TabItem announcements;
     private TabItem services;
     private ViewPager homeViewPager;
+    private EditText searchTxt;
 
 
     @Override
@@ -69,11 +68,14 @@ public class Home extends AppCompatActivity {
         });
 
         goTosearch = findViewById(R.id.search);
+        searchTxt = findViewById(R.id.search_txt);
         goTosearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent gotoSearchResult = new Intent(Home.this, SearchResults.class);
+                String searchData= String.valueOf(searchTxt.getText());
+                gotoSearchResult.putExtra("searchData",searchData);
                 startActivity(gotoSearchResult);
 
             }

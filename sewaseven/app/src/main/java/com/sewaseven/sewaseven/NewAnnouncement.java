@@ -22,20 +22,16 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.firebase.firestore.ServerTimestamp;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.google.type.DateTime;
-import com.sewaseven.additional.UID;
+import com.sewaseven.additional.definedFunctions;
 import com.sewaseven.database.Announsement;
 import com.sewaseven.database.User;
 
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -121,7 +117,7 @@ public class NewAnnouncement extends AppCompatActivity {
                     final User tempUser = new User();
 
                     final FirebaseFirestore db = FirebaseFirestore.getInstance();
-                    db.collection("User").whereEqualTo("user_id", UID.userID())
+                    db.collection("User").whereEqualTo("user_id", definedFunctions.userID())
                             .get()
                             .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                                 @Override

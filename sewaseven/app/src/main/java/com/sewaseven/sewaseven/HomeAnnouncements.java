@@ -23,6 +23,7 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.storage.StorageReference;
+import com.sewaseven.additional.CircleTransform;
 import com.sewaseven.database.Announsement;
 import com.squareup.picasso.Picasso;
 
@@ -90,11 +91,8 @@ public class HomeAnnouncements extends Fragment {
             super(view);
             name = (TextView) view.findViewById(R.id.home_recycle_announcement_pro_name);
             description = (TextView) view.findViewById(R.id.home_recycle_announcement_pro_caption);
-            ;
             announcement_pic = (ImageView) view.findViewById(R.id.home_recycle_announcement_pic);
-            ;
             profile_pic = (ImageView) view.findViewById(R.id.home_recycle_announcement_pro_pic);
-            ;
 
         }
     }
@@ -139,7 +137,7 @@ public class HomeAnnouncements extends Fragment {
 
                 //Log.e("---------",model.getImagePath());
 
-                Picasso.get().load(model.getProPicPath()).into(holder.profile_pic);
+                Picasso.get().load(model.getProPicPath()).transform(new CircleTransform()).into(holder.profile_pic);
 
             }
         };

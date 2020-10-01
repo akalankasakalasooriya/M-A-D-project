@@ -19,7 +19,7 @@
 
 
         <EditText
-            android:id="@+id/empty"
+            android:id="@+id/search_txt"
 
             android:layout_width="0dp"
             android:layout_height="40dp"

@@ -14,7 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ServiceList"></activity>
-        <activity android:name=".SearchResults" />
+        <activity android:name=".SearchResults"
+                  android:parentActivityName=".Home"
+            ></activity>
         <activity android:name=".About" />
         <activity android:name=".AddNewFaq" />
         <activity android:name=".SeeFAQ" />
