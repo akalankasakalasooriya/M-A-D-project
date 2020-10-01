@@ -62,4 +62,10 @@ public class ServiceList extends AppCompatActivity {
                 });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent gotoList = new Intent(ServiceList.this,Mainmenu.class);
+        startActivity(gotoList);
+    }
 }

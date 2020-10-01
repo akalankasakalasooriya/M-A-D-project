@@ -85,4 +85,9 @@ public class Mainmenu extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed() {
+        Intent gotoList = new Intent(Mainmenu.this,Home.class);
+        startActivity(gotoList);
+    }
 }

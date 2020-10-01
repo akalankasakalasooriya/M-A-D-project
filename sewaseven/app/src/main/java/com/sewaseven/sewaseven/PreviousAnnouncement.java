@@ -78,6 +78,13 @@ public class PreviousAnnouncement extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        Intent gotoList = new Intent(PreviousAnnouncement.this,ServiceList.class);
+        startActivity(gotoList);
+    }
+
     private void getTotalAnnouncement_week() {
         announcements_history_this_week = findViewById(R.id.announcements_history_this_week);
         FirebaseFirestore db = FirebaseFirestore.getInstance();

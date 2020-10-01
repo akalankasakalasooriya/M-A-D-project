@@ -3,6 +3,8 @@ package com.sewaseven.sewaseven;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.Manifest;
 import android.content.Context;
@@ -17,10 +19,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.sewaseven.database.Announcement_adapter;
+import com.sewaseven.database.Announsement;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ServicePage extends AppCompatActivity {
 
@@ -32,6 +41,11 @@ public class ServicePage extends AppCompatActivity {
     private TextView servicename; //kanchila
     private TextView locationobj; //Kanchila
     private TextView phoneobj; //Kanchila
+    ///////////////
+    private FirebaseFirestore firebaseFirestore;
+    private RecyclerView fire_store_list_announsement;
+    private List<Announsement> announsement_list;
+    private Announcement_adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -161,6 +175,38 @@ public class ServicePage extends AppCompatActivity {
                         }
                     }
                 });
+
+
+        ///////////////
+        fire_store_list_announsement = (RecyclerView) findViewById(R.id.service_page_announcements);
+        fire_store_list_announsement.setHasFixedSize(true);
+        fire_store_list_announsement.setLayoutManager(new LinearLayoutManager(this));
+
+        announsement_list = new ArrayList<>();
+        adapter = new Announcement_adapter(this, announsement_list);
+
+        fire_store_list_announsement.setAdapter(adapter);
+
+        firebaseFirestore = FirebaseFirestore.getInstance();
+        firebaseFirestore.collection("Announcement").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                if (!queryDocumentSnapshots.isEmpty()) {
+                    List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                    for (DocumentSnapshot d : list) {
+                        Announsement model = d.toObject(Announsement.class);
+                        model.setDocID(d.getId());
+                        announsement_list.add(model);
+                    }
+                    adapter.notifyDataSetChanged();
+
+                }
+            }
+
+        });
+
+
+
 
     }
 

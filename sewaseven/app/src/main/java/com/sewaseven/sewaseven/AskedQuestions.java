@@ -85,9 +85,9 @@ public class AskedQuestions extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
-        Intent homeintent = new Intent(AskedQuestions.this, Home.class);
-        homeintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(homeintent);
+        Intent gotoList = new Intent(AskedQuestions.this,ServiceList.class);
+        startActivity(gotoList);
+
 
     }
 
@@ -113,4 +113,6 @@ public class AskedQuestions extends AppCompatActivity {
                     }
                 });
     }
+
+
 }

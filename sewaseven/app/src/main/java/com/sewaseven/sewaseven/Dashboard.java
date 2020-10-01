@@ -17,9 +17,12 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.sewaseven.additional.definedFunctions;
 
 public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private Button btnAskedQuestions;
@@ -33,19 +36,26 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
     private TextView locationobj; //Kanchila
     private TextView phoneobj; //Kanchila
     private TextView descriptionobj; //Kanchila
+    String documentID = null;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+    protected void onStart() {
+        super.onStart();
+
+
+
+        Log.e("xxxxxxx","aaaaa"+documentID);
+
+
         /**
-         * akalanka doc id
+         * getting doc id
          * **/
         /////////////////////////////////////////////
 
-        Intent intent=getIntent();
-        String documentID= intent.getStringExtra("docID");
-        Toast.makeText(getApplicationContext(),documentID,Toast.LENGTH_SHORT).show();
+
+
+        //Toast.makeText(getApplicationContext(),documentID,Toast.LENGTH_SHORT).show();
 
 
 
@@ -89,6 +99,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
             @Override
             public void onClick(View view) {
                 Intent deleteServiceIntent = new Intent(Dashboard.this,DeleteService.class);
+                deleteServiceIntent.putExtra("docID_service_del",documentID);
                 startActivity(deleteServiceIntent);
             }
         });
@@ -99,6 +110,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
             @Override
             public void onClick(View view) {
                 Intent updateServiceDetailsIntent = new Intent(Dashboard.this,UpdateServiceDetails.class);
+                updateServiceDetailsIntent.putExtra("docID_service",documentID);
                 startActivity(updateServiceDetailsIntent);
             }
         });
@@ -117,11 +129,6 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
 
 //
 
-        Spinner spinner = findViewById(R.id.dashboard_spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.services, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
 
         //get service avg
         db.collection("Feedback").limit(20).orderBy("serverTimeStamp")
@@ -138,7 +145,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
                                 //avgServiceRating
                                 count++;
                                 sum += Float.parseFloat(document.getString("rating"));
-                                average = sum/(float)count;
+                                average = definedFunctions.calAVG(sum,count);
                             }
                             avgServiceRating.setText(String.valueOf(average));
                         } else {
@@ -147,93 +154,80 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
                     }
                 });
 
-        //get service name
 
         servicename = findViewById(R.id.dashboard_service_name);
 
-        db.collection("Service")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            String name = null;
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                // Log.d("", document.getId() + " => " + document.getData());
-                                name = document.getString("name");
-                            }
-                            servicename.setText(name);
-                        } else {
-                            Log.w("", "Error getting documents.", task.getException());
-                        }
-                    }
-                });
-
-        //get location
         locationobj = findViewById(R.id.dashboard_location);
-
-        db.collection("Service")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            String location = null;
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                // Log.d("", document.getId() + " => " + document.getData());
-                                location = document.getString("location");
-                            }
-                            locationobj.setText(location);
-                        } else {
-                            Log.w("", "Error getting documents.", task.getException());
-                        }
-                    }
-                });
-
-        //get phone number
 
         phoneobj = findViewById(R.id.dashboard_phone_number);
 
-        db.collection("Service")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            String phone = null;
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                // Log.d("", document.getId() + " => " + document.getData());
-                                phone = document.getString("tp_number");
-                            }
-                            phoneobj.setText(phone);
-                        } else {
-                            Log.w("", "Error getting documents.", task.getException());
-                        }
-                    }
-                });
-
-        //get description
-
         descriptionobj = findViewById(R.id.dashboard_description);
 
-        db.collection("Service")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            String description = null;
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                // Log.d("", document.getId() + " => " + document.getData());
-                                description = document.getString("description");
-                            }
-                            descriptionobj.setText(description);
-                        } else {
-                            Log.w("", "Error getting documents.", task.getException());
-                        }
+
+        /////////////////////////////////////////////////////////////
+
+
+        if(documentID==null || documentID == "")
+        {
+            Intent gotoList = new Intent(Dashboard.this,ServiceList.class);
+            startActivity(gotoList);
+
+        }
+        DocumentReference docRef = db.collection("Service").document(documentID);
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        //Log.d("TAG", "DocumentSnapshot data: " + document.getData());
+                        String description = document.getString("description");
+                        String phone = document.getString("tp_number");
+                        String location = document.getString("location");
+                        String name = document.getString("name");
+
+
+
+                        /////////////////////////
+                        descriptionobj.setText(description);
+                        phoneobj.setText(phone);
+                        locationobj.setText(location);
+                        servicename.setText(name);
+                    } else {
+                        Log.d("TAG", "No such document");
                     }
-                });
+                } else {
+                    Log.d("TAG", "get failed with ", task.getException());
+                }
+            }
+        });
+
+
+        /////////////////////////////////////////////////////////////
+
+
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dashboard);
+
+        Intent intent=getIntent();
+        documentID= intent.getStringExtra("docID");
+
+
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+
+
 
 
     @Override

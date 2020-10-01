@@ -210,9 +210,8 @@ public class NewAnnouncement extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
-        Intent dashintent = new Intent(NewAnnouncement.this, Dashboard.class);
-        dashintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(dashintent);
+        Intent gotoList = new Intent(NewAnnouncement.this,ServiceList.class);
+        startActivity(gotoList);
 
     }
 }

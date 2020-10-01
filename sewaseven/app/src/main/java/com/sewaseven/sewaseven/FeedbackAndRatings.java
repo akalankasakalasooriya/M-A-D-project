@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -63,6 +64,12 @@ public class FeedbackAndRatings extends AppCompatActivity {
         recyclerViewFeedBack.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewFeedBack.setAdapter(firestoreRecyclerAdapter);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent gotoList = new Intent(FeedbackAndRatings.this,ServiceList.class);
+        startActivity(gotoList);
     }
 
     private class FeedbackAndRating_viewHolder extends RecyclerView.ViewHolder {

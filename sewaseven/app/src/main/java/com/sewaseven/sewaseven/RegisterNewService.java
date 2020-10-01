@@ -3,6 +3,7 @@ package com.sewaseven.sewaseven;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.sewaseven.additional.definedFunctions;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,11 +31,8 @@ public class RegisterNewService extends AppCompatActivity implements AdapterView
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_new_service);
 
-        Spinner spinner = findViewById(R.id.spinnernew);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.location, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+
+
 
         //Data enter to the database
 
@@ -41,7 +40,7 @@ public class RegisterNewService extends AppCompatActivity implements AdapterView
         final EditText name = findViewById(R.id.servicename);
         final EditText description = findViewById(R.id.description);
         final EditText phone = findViewById(R.id.phonenumber);
-        final Spinner location = findViewById(R.id.spinnernew);
+        final EditText spinner = findViewById(R.id.spinnernew);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +51,8 @@ public class RegisterNewService extends AppCompatActivity implements AdapterView
                 service.put("name",name.getText().toString());
                 service.put("description",description.getText().toString());
                 service.put("tp_number",phone.getText().toString());
-                service.put("location",location.getSelectedItem().toString());
+                service.put("location",spinner.getText().toString());
+                service.put("ownerID", definedFunctions.userID());
 
 // Add a new document with a generated ID
                 db.collection("Service")
@@ -61,12 +61,17 @@ public class RegisterNewService extends AppCompatActivity implements AdapterView
                             @Override
                             public void onSuccess(DocumentReference documentReference) {
                                 Log.d("", "DocumentSnapshot added with ID: " + documentReference.getId());
+                                Toast.makeText(getApplicationContext(), "done", Toast.LENGTH_SHORT).show();
+                                    Intent gotoList = new Intent(RegisterNewService.this,ServiceList.class);
+                                    startActivity(gotoList);
+
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 Log.w("", "Error adding document", e);
+                                Toast.makeText(getApplicationContext(), "error", Toast.LENGTH_SHORT).show();
                             }
                         });
             }

@@ -121,18 +121,17 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                     DocumentReference updateFeedback = firebaseFirestore.collection("Feedback").document(docID[0]);
 
                     updateFeedback
-                            .update("capital", true)
+                            .update(
+                                    "rating", feedbackAndRatingsModel.getRating(),
+                                    "comment", feedbackAndRatingsModel.getComment(),
+                                    "serverTimeStamp", FieldValue.serverTimestamp()
+
+                            )
                             .addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Log.d("TAG", "DocumentSnapshot successfully updated!");
-                                    firebaseFirestore.collection("Feedback").document(docID[0])
-                                            .update(
-                                                    "rating", feedbackAndRatingsModel.getRating(),
-                                                    "comment", feedbackAndRatingsModel.getComment(),
-                                                    "serverTimeStamp", FieldValue.serverTimestamp()
 
-                                            );
                                     Toast.makeText(getApplicationContext(), "updated", Toast.LENGTH_SHORT).show();
                                     Intent reviewList = new Intent(CreateUpdateMyFeedback.this, RatingsAndReviews.class);
                                     startActivity(reviewList);
