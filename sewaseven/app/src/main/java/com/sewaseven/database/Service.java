@@ -80,4 +80,13 @@ public class Service implements Serializable {
     public void setDocID(String docID) {
         DocID = docID;
     }
+
+    public void setName(String name){this.name = name;} //kanchila
+
+    public void setDescription(String description){this.description = description;} //kanchila
+
+    public void setTp_number(String tp_number){this.tp_number = tp_number;} //kanchila
+
+    public void setLocation(String location){this.location = location;} //kanchila
+
 }

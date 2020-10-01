@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -37,6 +38,19 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+        /**
+         * akalanka doc id
+         * **/
+        /////////////////////////////////////////////
+
+        Intent intent=getIntent();
+        String documentID= intent.getStringExtra("docID");
+        Toast.makeText(getApplicationContext(),documentID,Toast.LENGTH_SHORT).show();
+
+
+
+
+        ///////////////////////////////////
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         avgServiceRating = findViewById(R.id.dashboard_average_rating);
 

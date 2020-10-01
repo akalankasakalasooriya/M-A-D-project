@@ -13,7 +13,8 @@
         android:roundIcon="@drawable/sewaseven"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SearchResults"></activity>
+        <activity android:name=".ServiceList"></activity>
+        <activity android:name=".SearchResults" />
         <activity android:name=".About" />
         <activity android:name=".AddNewFaq" />
         <activity android:name=".SeeFAQ" />
@@ -32,7 +33,7 @@
         <activity android:name=".AskedQuestions" />
         <activity android:name=".ChangeYourInformation" />
         <activity android:name=".RegisterNewService" />
-        <activity android:name=".Dashboard" />
+        <activity android:name=".Dashboard" android:parentActivityName=".ServiceList"/>
         <activity android:name=".Login" />
         <activity android:name=".Mainmenu" />
         <activity android:name=".Home" />

@@ -94,7 +94,8 @@ public class UpdateServiceDetails extends AppCompatActivity implements AdapterVi
                                 List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
                                 for(DocumentSnapshot snapshot: snapshotList){
                                     //batch.delete(snapshot.getReference());
-                                  //  batch.update(snapshot.get("name"),name_update.getText().toString()); //to be edit............................
+                                    //batch.update(snapshot.get("name"),name_update.getText().toString()); //to be edit............................
+                                    //batch.update(snapshot.get("name"),name_update.getText().toString()); //to be edit............................
                                 }
                                 batch.commit()
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
