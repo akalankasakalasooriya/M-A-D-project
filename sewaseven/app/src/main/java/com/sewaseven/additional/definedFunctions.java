@@ -1,24 +1,9 @@
 package com.sewaseven.additional;
 
-import android.util.Log;
-import android.widget.ArrayAdapter;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.apache.commons.lang3.math.NumberUtils;
 
 public class definedFunctions {
 
@@ -51,6 +36,23 @@ public class definedFunctions {
 
         return terurnValue;
     }
+
+    public static boolean isValidPhone(String phone){
+        boolean returnValue= false;
+        phone.trim();
+        try {
+            if(phone.length()==10 && NumberUtils.isDigits(phone))
+            {
+
+                returnValue = true;
+            }
+
+        }catch (Exception e){
+            throw e;
+        }
+        return returnValue;
+    }
+
 
 
 }

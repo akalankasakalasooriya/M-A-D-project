@@ -114,12 +114,13 @@
 
             <EditText
                 android:id="@+id/phonenumber"
+                android:inputType="phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:ems="10"
-                android:inputType="textEmailAddress" />
+ />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -171,6 +172,7 @@
                 android:text="@string/new_service_done"
                 android:textColor="@color/btn_text"
                 android:textSize="18sp" />
+
 
 
         </LinearLayout>

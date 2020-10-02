@@ -4,6 +4,7 @@ import android.util.Log;
 
 import com.sewaseven.additional.definedFunctions;
 
+import org.apache.commons.lang3.math.NumberUtils;
 import org.junit.After;
 import org.junit.Test;
 
@@ -32,17 +33,22 @@ public class ExampleUnitTest {
         //by IT19044446
         assertEquals(2.5005,definedFunctions.calAVG((float)5.001,2),0.0001);
         assertEquals(true,definedFunctions.isValidEmail("mail@gmail.com"));
+        assertEquals(false,definedFunctions.isValidPhone("012345678998"));
 
         //by IT19051208
         assertEquals(1,definedFunctions.calAVG((float)10,10),0);
-        assertEquals(true,definedFunctions.isValidEmail("akalanka@mail.lk"));
+        assertEquals(true,definedFunctions.isValidEmail("akalanka@gmail.lk"));
+        assertEquals(true,definedFunctions.isValidPhone("0772637357"));
+
 
         //by IT19011462
         assertEquals(15000,definedFunctions.calAVG((float)60000,4),0.1);
         assertEquals(true,definedFunctions.isValidEmail("abcd@efgh.com"));
+        assertEquals(false,definedFunctions.isValidPhone("12.44"));
 
         //by IT19021058
         assertEquals(133.367,definedFunctions.calAVG((float)400.1,3),0.01);
         assertEquals(true,definedFunctions.isValidEmail("anjana@xyz.com"));
+        assertEquals(false,definedFunctions.isValidPhone("abcdefghij"));
     }
 }

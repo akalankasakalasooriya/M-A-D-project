@@ -37,6 +37,18 @@ public class DeleteService extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                String checkertxt = String.valueOf(name_delete.getText());
+                checkertxt = checkertxt.trim();
+                //validation
+                if ((checkertxt.equals("delete") || checkertxt.equals("Delete") || checkertxt.equals("DELETE")))
+                {
+
+                }
+                else {
+                    Toast.makeText(getApplicationContext(), "please fill the text box correctly", Toast.LENGTH_SHORT).show();
+                    return;
+
+                }
                 db.collection("Service").document(documentID)
                         .delete()
                         .addOnSuccessListener(new OnSuccessListener<Void>() {

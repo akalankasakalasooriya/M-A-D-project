@@ -69,7 +69,7 @@ public class FAQUpdate extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (String.valueOf(update_q.getText()).trim()=="" || String.valueOf(update_a.getText()).trim()==""){
+                if (String.valueOf(update_q.getText()).trim().equals("") || String.valueOf(update_a.getText()).trim().equals("")){
                     Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
                     finish();
                 }

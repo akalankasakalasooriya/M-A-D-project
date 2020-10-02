@@ -76,7 +76,7 @@ public class NewAnnouncement extends AppCompatActivity {
                 String txtdescription = String.valueOf(description.getText());
                 //validation
 
-                if (txtdescription.equals("") || txtdescription.equals(null) || imguri == null) {
+                if (txtdescription.trim().equals("") || imguri == null) {
                     Toast.makeText(getApplicationContext(), "please fill description", Toast.LENGTH_SHORT).show();
                 } else {
 

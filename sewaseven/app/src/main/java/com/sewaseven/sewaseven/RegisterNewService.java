@@ -45,6 +45,12 @@ public class RegisterNewService extends AppCompatActivity implements AdapterView
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //validation
+                if (String.valueOf(name.getText()).trim().equals("") || String.valueOf(description.getText()).trim().equals("") || definedFunctions.isValidPhone(String.valueOf(phone.getText()))){
+                    Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 FirebaseFirestore db = FirebaseFirestore.getInstance();
                 // Create a new user with a first and last name
                 Map<String, Object> service = new HashMap<>();

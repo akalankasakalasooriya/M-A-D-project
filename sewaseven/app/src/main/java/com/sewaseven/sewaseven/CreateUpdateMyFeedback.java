@@ -106,9 +106,9 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                 String rating = Float.toString(ratingBar.getRating());
                 String comment = String.valueOf(myComment.getText());
                 //validation
-                if (comment.trim()==""){
+                if (comment.trim().equals("")){
                     Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
-                    finish();
+                    return;
                 }
                 String posted_user_id = definedFunctions.userID();
                 final FeedbackAndRatingsModel feedbackAndRatingsModel = new FeedbackAndRatingsModel();

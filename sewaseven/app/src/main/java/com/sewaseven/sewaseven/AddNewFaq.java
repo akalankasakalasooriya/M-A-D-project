@@ -44,9 +44,9 @@ public class AddNewFaq extends AppCompatActivity {
                 String txtquestion = String.valueOf(question.getText());
 
                 //validation
-                if (txtanswer.trim()=="" || txtquestion.trim()==""){
+                if (txtanswer.trim().equals("") || txtquestion.trim().equals("")){
                     Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
-                    finish();
+                    return;
                 }
 
                 Map<String, Object> FAQ = new HashMap<>();
