@@ -90,8 +90,8 @@ For example, if a customer needs to repair his/her mobile phone they can find ou
     <!--    KANCHILA-->
 
     <string name="change_info_heading">Setings</string>
-    <string name="change_info_name">Enter Name</string>
-    <string name="change_info_email">Enter Email</string>
+    <string name="change_info_name">Enter First Name</string>
+    <string name="change_info_email">Enter Last First Name</string>
     <string name="change_info_password">Enter New Password</string>
     <string name="change_info_re_password">Re Enter New Password</string>
     <string name="change_info_update_btn">Update</string>

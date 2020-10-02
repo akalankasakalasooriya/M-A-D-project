@@ -74,6 +74,7 @@ public class NewAnnouncement extends AppCompatActivity {
                 //publish description and image as link
 
                 String txtdescription = String.valueOf(description.getText());
+                //validation
 
                 if (txtdescription.equals("") || txtdescription.equals(null) || imguri == null) {
                     Toast.makeText(getApplicationContext(), "please fill description", Toast.LENGTH_SHORT).show();

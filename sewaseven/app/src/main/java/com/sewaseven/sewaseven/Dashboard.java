@@ -24,7 +24,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.sewaseven.additional.definedFunctions;
 
-public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Dashboard extends AppCompatActivity {
     private Button btnAskedQuestions;
     private Button btnFeedbackAndRatings;
     private ImageButton previousAnnouncements;
@@ -43,24 +43,6 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
     protected void onStart() {
         super.onStart();
 
-
-
-        Log.e("xxxxxxx","aaaaa"+documentID);
-
-
-        /**
-         * getting doc id
-         * **/
-        /////////////////////////////////////////////
-
-
-
-        //Toast.makeText(getApplicationContext(),documentID,Toast.LENGTH_SHORT).show();
-
-
-
-
-        ///////////////////////////////////
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         avgServiceRating = findViewById(R.id.dashboard_average_rating);
 
@@ -68,7 +50,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnAskedQuestions.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent dashboardQuestionsIntent = new Intent(Dashboard.this,AskedQuestions.class);
+                Intent dashboardQuestionsIntent = new Intent(Dashboard.this, AskedQuestions.class);
                 startActivity(dashboardQuestionsIntent);
             }
         });
@@ -78,7 +60,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         previousAnnouncements.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent PreviousAnnouncementsIntent = new Intent(Dashboard.this,PreviousAnnouncement.class);
+                Intent PreviousAnnouncementsIntent = new Intent(Dashboard.this, PreviousAnnouncement.class);
                 startActivity(PreviousAnnouncementsIntent);
             }
         });
@@ -88,7 +70,7 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnAddNewAnnouncement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent addNewAnnouncementIntent = new Intent(Dashboard.this,NewAnnouncement.class);
+                Intent addNewAnnouncementIntent = new Intent(Dashboard.this, NewAnnouncement.class);
                 startActivity(addNewAnnouncementIntent);
             }
         });
@@ -98,8 +80,8 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnDeleteService.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent deleteServiceIntent = new Intent(Dashboard.this,DeleteService.class);
-                deleteServiceIntent.putExtra("docID_service_del",documentID);
+                Intent deleteServiceIntent = new Intent(Dashboard.this, DeleteService.class);
+                deleteServiceIntent.putExtra("docID_service_del", documentID);
                 startActivity(deleteServiceIntent);
             }
         });
@@ -109,25 +91,21 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         btnUpdateServiceDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent updateServiceDetailsIntent = new Intent(Dashboard.this,UpdateServiceDetails.class);
-                updateServiceDetailsIntent.putExtra("docID_service",documentID);
+                Intent updateServiceDetailsIntent = new Intent(Dashboard.this, UpdateServiceDetails.class);
+                updateServiceDetailsIntent.putExtra("docID_service", documentID);
                 startActivity(updateServiceDetailsIntent);
             }
         });
-
 
 
         btnFeedbackAndRatings = findViewById(R.id.feedbackAndRatings);
         btnFeedbackAndRatings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent updateServiceDetailsIntent = new Intent(Dashboard.this,FeedbackAndRatings.class);
+                Intent updateServiceDetailsIntent = new Intent(Dashboard.this, FeedbackAndRatings.class);
                 startActivity(updateServiceDetailsIntent);
             }
         });
-
-
-//
 
 
         //get service avg
@@ -138,14 +116,14 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             int count = 0;
-                            float sum =(float) 0.0, average = (float) 0.0;
+                            float sum = (float) 0.0, average = (float) 0.0;
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 //Log.d("TAG", document.getId() + " => " + document.getData());
                                 //avgServiceRating
                                 count++;
                                 sum += Float.parseFloat(document.getString("rating"));
-                                average = definedFunctions.calAVG(sum,count);
+                                average = definedFunctions.calAVG(sum, count);
                             }
                             avgServiceRating.setText(String.valueOf(average));
                         } else {
@@ -164,12 +142,8 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         descriptionobj = findViewById(R.id.dashboard_description);
 
 
-        /////////////////////////////////////////////////////////////
-
-
-        if(documentID==null || documentID == "")
-        {
-            Intent gotoList = new Intent(Dashboard.this,ServiceList.class);
+        if (documentID == null || documentID == "") {
+            Intent gotoList = new Intent(Dashboard.this, ServiceList.class);
             startActivity(gotoList);
 
         }
@@ -187,7 +161,6 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
                         String name = document.getString("name");
 
 
-
                         /////////////////////////
                         descriptionobj.setText(description);
                         phoneobj.setText(phone);
@@ -203,18 +176,17 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
         });
 
 
-        /////////////////////////////////////////////////////////////
-
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
-        Intent intent=getIntent();
-        documentID= intent.getStringExtra("docID");
+        /**
+         * getting doc id
+         * **/
+        Intent intent = getIntent();
+        documentID = intent.getStringExtra("docID");
 
 
     }
@@ -227,17 +199,4 @@ public class Dashboard extends AppCompatActivity implements AdapterView.OnItemSe
     }
 
 
-
-
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String text = adapterView.getItemAtPosition(i).toString();
-        //Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
 }

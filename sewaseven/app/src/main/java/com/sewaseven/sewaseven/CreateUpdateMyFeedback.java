@@ -60,7 +60,6 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                                 temp_feedbackAndRatings.setComment(document.getString("comment"));
                                 temp_feedbackAndRatings.setRating(document.getString("rating"));
                                 docID[0] = document.getId();
-                                //Log.e("----------data------", document.getString("posted_user_id"));
                                 //setting data if already submitted
                                 String currentUserID = definedFunctions.userID();
                                 if (currentUserID.equals(temp_feedbackAndRatings.getPosted_user_id())) {
@@ -78,7 +77,6 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
                 });
 
 
-//create
         //getting current user details
         final User tempUser = new User();
 
@@ -107,6 +105,11 @@ public class CreateUpdateMyFeedback extends AppCompatActivity {
             public void onClick(View view) {
                 String rating = Float.toString(ratingBar.getRating());
                 String comment = String.valueOf(myComment.getText());
+                //validation
+                if (comment.trim()==""){
+                    Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
                 String posted_user_id = definedFunctions.userID();
                 final FeedbackAndRatingsModel feedbackAndRatingsModel = new FeedbackAndRatingsModel();
                 feedbackAndRatingsModel.setRating(rating);

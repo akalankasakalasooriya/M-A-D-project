@@ -43,7 +43,7 @@ public class ServiceList extends AppCompatActivity {
         fire_store_list_search.setAdapter(adapter);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
-        firebaseFirestore.collection("Service").orderBy("name").whereEqualTo("ownerID", definedFunctions.userID())
+        firebaseFirestore.collection("Service").whereEqualTo("ownerID", definedFunctions.userID())
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override

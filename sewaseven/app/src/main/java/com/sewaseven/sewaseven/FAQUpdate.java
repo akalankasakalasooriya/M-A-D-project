@@ -69,6 +69,10 @@ public class FAQUpdate extends AppCompatActivity {
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (String.valueOf(update_q.getText()).trim()=="" || String.valueOf(update_a.getText()).trim()==""){
+                    Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
 
 
                 DocumentReference updateFAQ = db.collection("FAQ").document(finalDocumentID);
@@ -77,7 +81,6 @@ public class FAQUpdate extends AppCompatActivity {
                         .update(
                                 "question", String.valueOf(update_q.getText()),
                                 "answer", String.valueOf(update_a.getText())
-//                                                "serverTimeStamp", FieldValue.serverTimestamp()
 
                         )
                         .addOnSuccessListener(new OnSuccessListener<Void>() {

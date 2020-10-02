@@ -77,7 +77,6 @@ public class AskedQuestions extends AppCompatActivity {
             }
         });
 
-        /////////////
         getTotalFAQ();
 
     }
@@ -85,7 +84,7 @@ public class AskedQuestions extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
-        Intent gotoList = new Intent(AskedQuestions.this,ServiceList.class);
+        Intent gotoList = new Intent(AskedQuestions.this, ServiceList.class);
         startActivity(gotoList);
 
 

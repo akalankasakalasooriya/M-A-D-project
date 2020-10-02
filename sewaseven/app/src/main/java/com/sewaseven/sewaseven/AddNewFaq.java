@@ -43,11 +43,17 @@ public class AddNewFaq extends AppCompatActivity {
                 String txtanswer = String.valueOf(answer.getText());
                 String txtquestion = String.valueOf(question.getText());
 
+                //validation
+                if (txtanswer.trim()=="" || txtquestion.trim()==""){
+                    Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+
                 Map<String, Object> FAQ = new HashMap<>();
                 FAQ.put("answer", txtanswer);
                 FAQ.put("question", txtquestion);
 
-// Add a new document with a generated ID
+                // Add a new document with a generated ID
                 db.collection("FAQ")
                         .add(FAQ)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
