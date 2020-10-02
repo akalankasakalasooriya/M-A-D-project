@@ -59,7 +59,6 @@
 
 
                 <ImageView
-                    android:id="@+id/imageDashboard"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.20"
@@ -67,7 +66,6 @@
                     app:srcCompat="@drawable/ic_speedometer" />
 
                 <TextView
-                    android:id="@+id/textDashboard"
                     android:layout_width="0dp"
                     android:layout_weight="0.80"
                     android:layout_height="match_parent"
@@ -91,7 +89,6 @@
 
 
                 <ImageView
-                    android:id="@+id/imageNewService"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.20"
@@ -99,7 +96,6 @@
                     app:srcCompat="@drawable/ic_confetti" />
 
                 <TextView
-                    android:id="@+id/textNewService"
                     android:layout_width="0dp"
                     android:layout_weight="0.80"
                     android:layout_height="match_parent"
@@ -123,7 +119,6 @@
 
 
                 <ImageView
-                    android:id="@+id/imageChangeInfo"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.20"
@@ -131,7 +126,6 @@
                     app:srcCompat="@drawable/ic_refresh" />
 
                 <TextView
-                    android:id="@+id/textChangeInfo"
                     android:layout_width="0dp"
                     android:layout_weight="0.80"
                     android:layout_height="match_parent"
@@ -155,7 +149,6 @@
 
 
                 <ImageView
-                    android:id="@+id/imageLogOut"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.20"
@@ -163,7 +156,6 @@
                     app:srcCompat="@drawable/ic_arrow" />
 
                 <TextView
-                    android:id="@+id/textLogOut"
                     android:layout_width="0dp"
                     android:layout_weight="0.80"
                     android:layout_height="match_parent"
@@ -187,7 +179,6 @@
 
 
                 <ImageView
-                    android:id="@+id/imageAbout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.20"
@@ -195,7 +186,6 @@
                     app:srcCompat="@drawable/ic_about" />
 
                 <TextView
-                    android:id="@+id/textAbout"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.80"

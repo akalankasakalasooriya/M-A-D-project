@@ -13,6 +13,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.sewaseven.additional.definedFunctions;
 import com.sewaseven.database.Service;
 import com.sewaseven.database.Service_List_adapter;
 import com.sewaseven.database.Service_frag_adapter;
@@ -42,7 +43,7 @@ public class ServiceList extends AppCompatActivity {
         fire_store_list_search.setAdapter(adapter);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
-        firebaseFirestore.collection("Service").orderBy("name")
+        firebaseFirestore.collection("Service").orderBy("name").whereEqualTo("ownerID", definedFunctions.userID())
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override

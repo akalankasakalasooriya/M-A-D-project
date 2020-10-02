@@ -19,7 +19,6 @@
 
         <LinearLayout
 
-            android:id="@+id/linktoProfileS"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:orientation="horizontal"
@@ -27,7 +26,6 @@
 
 
             <ImageView
-                android:id="@+id/home_services_single_img"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"

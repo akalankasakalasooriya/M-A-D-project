@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -27,10 +28,21 @@ public class ExampleUnitTest {
      * **/
 
     @Test
-    public void avg_is_correct() {
-        assertEquals(2.5005,definedFunctions.calAVG((float)5.001,2),0.0001); //by IT19044446
-        assertEquals(1,definedFunctions.calAVG((float)10,10),0); //by IT19051208
-        assertEquals(15000,definedFunctions.calAVG((float)60000,4),0.1); //by IT19011462
-        assertEquals(133.367,definedFunctions.calAVG((float)400.1,3),0.01); //by IT19021058
+    public void is_correct() {
+        //by IT19044446
+        assertEquals(2.5005,definedFunctions.calAVG((float)5.001,2),0.0001);
+        assertEquals(true,definedFunctions.isValidEmail("mail@gmail.com"));
+
+        //by IT19051208
+        assertEquals(1,definedFunctions.calAVG((float)10,10),0);
+        assertEquals(true,definedFunctions.isValidEmail("akalanka@mail.lk"));
+
+        //by IT19011462
+        assertEquals(15000,definedFunctions.calAVG((float)60000,4),0.1);
+        assertEquals(true,definedFunctions.isValidEmail("abcd@efgh.com"));
+
+        //by IT19021058
+        assertEquals(133.367,definedFunctions.calAVG((float)400.1,3),0.01);
+        assertEquals(true,definedFunctions.isValidEmail("anjana@xyz.com"));
     }
 }

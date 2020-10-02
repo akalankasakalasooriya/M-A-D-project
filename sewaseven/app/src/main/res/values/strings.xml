@@ -30,7 +30,6 @@
     <string name="main_menu_about">About</string>
 
 
-    <string name="sign_up_name">Name</string>
     <string name="sign_up_email">Email</string>
     <string name="sign_up_password">Password</string>
     <string name="sign_up_SignUP">Sign Up</string>
@@ -89,14 +88,6 @@ For example, if a customer needs to repair his/her mobile phone they can find ou
 
 
     <!--    KANCHILA-->
-    <string-array name="services">
-        <item>service 1</item>
-        <item>service 2</item>
-        <item>service 3</item>
-        <item>service 4</item>
-        <item>service 5</item>
-        <item>service 6</item>
-    </string-array>
 
     <string name="change_info_heading">Setings</string>
     <string name="change_info_name">Enter Name</string>
@@ -105,36 +96,19 @@ For example, if a customer needs to repair his/her mobile phone they can find ou
     <string name="change_info_re_password">Re Enter New Password</string>
     <string name="change_info_update_btn">Update</string>
 
-    <string-array name="location">
-        <item>Colombo</item>
-        <item>Badulla</item>
-        <item>Gampaha</item>
-        <item>Kandy</item>
-        <item>Anuradhapura</item>
-        <item>Galle</item>
-    </string-array>
-
 
     <string name="service_dashboard_ratings">Ratings :</string>
-    <string name="service_dashboard_total_followers">Total Followers :</string>
-    <string name="service_dashboard_followers_this_week">Followers on This Week :</string>
     <string name="service_dashboard_name">Name / Company Name :</string>
     <string name="service_dashboard_phone">Phone Number :</string>
     <string name="service_dashboard_location">Location :</string>
-    <string name="service_dashboard_mail">Email :</string>
     <string name="service_dashboard_faq_btn">manage faq</string>
     <string name="service_dashboard_feedback_nd_ratings">Feedback and Ratings</string>
     <string name="service_dashboard_data1">xx/5</string>
-    <string name="service_dashboard_data2">xxx</string>
     <string name="service_dashboard_data3">xxxxx</string>
     <string name="service_dashboard_description">Description</string>
 
 
     <string name="delete_service_heading">Delete Service</string>
-    <string name="delete_service_r1">Reason 1</string>
-    <string name="delete_service_r2">Reason 3</string>
-    <string name="delete_service_r3">Reason 3</string>
-    <string name="delete_service_enter_password">Enter Password</string>
     <string name="delete_service_confirm">Confirm Delete</string>
 
 

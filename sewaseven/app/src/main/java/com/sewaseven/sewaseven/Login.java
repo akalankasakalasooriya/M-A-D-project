@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.sewaseven.additional.definedFunctions;
 
 public class Login extends AppCompatActivity {
     private Button signupbtn, signinbtn;
@@ -55,7 +56,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailId.getText().toString();
                 String password = passwordId.getText().toString();
-                if (email.isEmpty()) {
+                if (email.isEmpty() && definedFunctions.isValidEmail(email)) {
                     emailId.setError("Enter Email");
                     emailId.requestFocus();
                 } else if (password.isEmpty()) {

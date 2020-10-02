@@ -48,14 +48,12 @@
 
 
             <TextView
-                android:id="@+id/FAQUpdate"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
 
                 android:text="@string/FAQ_update_txt"
                 android:textColor="#2196F3" />
             <TextView
-                android:id="@+id/FAQdocumentID"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 android:visibility="invisible"

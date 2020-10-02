@@ -1,14 +1,19 @@
 package com.sewaseven.sewaseven;
 
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import static android.app.PendingIntent.getActivity;
 
 public class Mainmenu extends AppCompatActivity {
     private LinearLayout changeYrInfobtn;
@@ -16,6 +21,7 @@ public class Mainmenu extends AppCompatActivity {
     private LinearLayout dashBoardbtn;
     private LinearLayout logoutbtn;
     private LinearLayout aboutAppbtn;
+    AlertDialog.Builder builder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,14 +30,39 @@ public class Mainmenu extends AppCompatActivity {
 
 
         logoutbtn = findViewById(R.id.logoutbtn);
+
+        builder = new AlertDialog.Builder(this);
         logoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Intent loginintent = new Intent(Mainmenu.this, Login.class);
-                loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(loginintent);
+
+                //Setting message manually and performing action on button click
+                builder.setMessage("Do you want to log out?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                FirebaseAuth.getInstance().signOut();
+                                Intent loginintent = new Intent(getApplicationContext(), Login.class);
+                                loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                loginintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                startActivity(loginintent);
+                                finish();
+                                Toast.makeText(getApplicationContext(),"done",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                //  Action for 'NO' Button
+                                dialog.cancel();
+
+                            }
+                        });
+                //Creating dialog box
+                AlertDialog alert = builder.create();
+                //Setting the title manually
+                alert.setTitle("Confirm");
+                alert.show();
 
             }
         });

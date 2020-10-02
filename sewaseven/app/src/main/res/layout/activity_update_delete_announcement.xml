@@ -28,7 +28,6 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textView22"
                     android:layout_width="264dp"
                     android:layout_height="39dp"
                     android:text="@string/edit_announcement_heading"
@@ -37,7 +36,6 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:id="@+id/imageView13"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"

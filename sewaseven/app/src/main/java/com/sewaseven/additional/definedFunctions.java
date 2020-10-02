@@ -42,5 +42,15 @@ public class definedFunctions {
         return avg;
     }
 
+    public static boolean isValidEmail(String email){
+        boolean terurnValue= false;
+        email.trim();
+        if (email.contains("@") && email.contains(".") ){
+            terurnValue = true;
+        }
+
+        return terurnValue;
+    }
+
 
 }

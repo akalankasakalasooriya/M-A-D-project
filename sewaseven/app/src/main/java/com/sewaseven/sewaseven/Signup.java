@@ -47,8 +47,8 @@ public class Signup extends AppCompatActivity {
             public void onClick(View view) {
                 String email = emailId.getText().toString();
                 String password = passwordId.getText().toString();
-                if (email.isEmpty()) {
-                    emailId.setError("Enter Email");
+                if (email.isEmpty() && definedFunctions.isValidEmail(email)) {
+                    emailId.setError("Enter valid Email");
                     emailId.requestFocus();
                 }
                 if (password.isEmpty()) {

@@ -33,7 +33,6 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/imageView8"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
