@@ -85,7 +85,7 @@ public class UpdateServiceDetails extends AppCompatActivity implements AdapterVi
         button_Update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (String.valueOf(name_update.getText()).trim().equals("") || String.valueOf(description_update.getText()).trim().equals("") || definedFunctions.isValidPhone(String.valueOf(phone_update.getText()))){
+                if (String.valueOf(name_update.getText()).trim().equals("") || String.valueOf(description_update.getText()).trim().equals("") || !definedFunctions.isValidPhone(String.valueOf(phone_update.getText()))){
                     Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
                     return;
                 }

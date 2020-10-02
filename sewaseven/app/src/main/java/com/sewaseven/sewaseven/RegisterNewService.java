@@ -46,7 +46,7 @@ public class RegisterNewService extends AppCompatActivity implements AdapterView
             @Override
             public void onClick(View view) {
                 //validation
-                if (String.valueOf(name.getText()).trim().equals("") || String.valueOf(description.getText()).trim().equals("") || definedFunctions.isValidPhone(String.valueOf(phone.getText()))){
+                if (String.valueOf(name.getText()).trim().equals("") || String.valueOf(description.getText()).trim().equals("") || !definedFunctions.isValidPhone(String.valueOf(phone.getText()))){
                     Toast.makeText(getApplicationContext(), "please enter data correctly", Toast.LENGTH_SHORT).show();
                     return;
                 }

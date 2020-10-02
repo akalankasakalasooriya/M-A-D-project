@@ -1,5 +1,7 @@
 package com.sewaseven.additional;
 
+import android.util.Log;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -39,7 +41,8 @@ public class definedFunctions {
 
     public static boolean isValidPhone(String phone){
         boolean returnValue= false;
-        phone.trim();
+        phone=phone.trim();
+        Log.e("test",phone);
         try {
             if(phone.length()==10 && NumberUtils.isDigits(phone))
             {
