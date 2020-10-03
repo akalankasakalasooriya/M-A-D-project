@@ -146,7 +146,7 @@ public class NewAnnouncement extends AppCompatActivity {
                                                         @Override
                                                         public void onSuccess(DocumentReference documentReference) {
                                                             Log.e("TAG", "DocumentSnapshot added with ID: " + documentReference.getId());
-                                                            Intent dashintent = new Intent(NewAnnouncement.this, Dashboard.class);
+                                                            Intent dashintent = new Intent(NewAnnouncement.this, PreviousAnnouncement.class);
                                                             dashintent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                                             startActivity(dashintent);
                                                         }
