@@ -50,7 +50,7 @@ public class UpdateDeleteAnnouncement extends AppCompatActivity {
                     if (document.exists()) {
 
                         //Log.e("TAG", "DocumentSnapshot data: " + document.get("question")+ document.get("answer"));
-                        info.setText(String.valueOf(document.get("answer")));
+                        info.setText(String.valueOf(document.get("description")));
                         Picasso.get().load(String.valueOf(document.get("imagePath"))).into(img);
                     } else {
                         Log.d("TAG", "No such document");

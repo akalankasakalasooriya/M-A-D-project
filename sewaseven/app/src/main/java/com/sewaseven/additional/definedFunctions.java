@@ -35,7 +35,6 @@ public class definedFunctions {
         if (email.contains("@") && email.contains(".") ){
             terurnValue = true;
         }
-
         return terurnValue;
     }
 
@@ -46,10 +45,8 @@ public class definedFunctions {
         try {
             if(phone.length()==10 && NumberUtils.isDigits(phone))
             {
-
                 returnValue = true;
             }
-
         }catch (Exception e){
             throw e;
         }

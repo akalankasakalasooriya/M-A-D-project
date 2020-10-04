@@ -32,7 +32,7 @@ import java.util.Map;
 
 import io.grpc.internal.LogExceptionRunnable;
 
-public class UpdateServiceDetails extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class UpdateServiceDetails extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,15 +130,5 @@ public class UpdateServiceDetails extends AppCompatActivity implements AdapterVi
         Intent gotoList = new Intent(UpdateServiceDetails.this,ServiceList.class);
         startActivity(gotoList);
     }
-
-    @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String text = adapterView.getItemAtPosition(i).toString();
-        Toast.makeText(adapterView.getContext(), text, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
+    
 }
